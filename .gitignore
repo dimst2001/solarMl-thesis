@@ -1,0 +1,12 @@
+# Large data
+../pvdata/
+*.snappy*
+*.parquet
+
+# Virtual env
+../myenv/
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
