@@ -1,12 +1,29 @@
-# Large data
-../pvdata/
-*.snappy*
+# Python Environment
+__pycache__/
+*.py[cod]
+*$py.class
+myenv/
+.venv/
+env/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Binary & Large Data Files
+data/raw/
+data/processed/
+data/cleaned/
+data/features/
+*.csv
 *.parquet
 
-# Virtual env
-../myenv/
+# Heavy ML Artifacts
+artifacts/models/*.json
+artifacts/models/*.pkl
+artifacts/models/*.bin
+artifacts/models/*.joblib
 
-# Python cache
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
+# IDE & OS specific
+.vscode/
+.idea/
+.DS_Store
