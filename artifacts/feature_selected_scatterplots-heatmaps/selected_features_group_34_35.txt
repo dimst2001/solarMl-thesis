@@ -1,0 +1,7 @@
+ac_power_W
+ac_current
+dc_current
+poa_irradiance
+module_temp_C
+inverter_temp
+relative_humidity

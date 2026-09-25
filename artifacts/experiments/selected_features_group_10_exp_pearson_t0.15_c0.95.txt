@@ -1,0 +1,7 @@
+ac_current
+poa_irradiance
+module_temp_3
+inverter_temp
+ac_voltage
+dc_pos_voltage
+ambient_temp

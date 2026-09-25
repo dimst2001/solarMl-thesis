@@ -27,6 +27,8 @@ from src.data.feature_selection import (
     resolve_system_file_path,
     run_feature_selection_pipeline,
     validate_features_across_systems,
+    run_group_feature_selection,
+    run_experimental_feature_selection,
 )
 
 __all__ = [
@@ -37,4 +39,6 @@ __all__ = [
     "calculate_pearson_correlations",
     "validate_features_across_systems",
     "run_feature_selection_pipeline",
+    "run_group_feature_selection",
+    "run_experimental_feature_selection",
 ]

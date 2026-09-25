@@ -1,0 +1,36 @@
+# configs/train_config.yaml
+experiment:
+  name: "baseline_pv_power_forecasting"
+  seed: 42
+
+data:
+  target_col: "dc_power"
+  features:
+    - "poa_irradiance"
+    - "ambient_temp"
+    - "module_temp"
+    - "solar_zenith"
+    - "solar_azimuth"
+    - "clear_sky_ghi"
+  time_resample: "15min"
+
+features:
+  lags: [1, 2, 4, 96]  # 1 step, 2 steps, 1 hour (4x15m), 24 hours (96x15m)
+  rolling_windows: [2, 4] # 30m, 1h
+  rolling_stats: ["mean", "std"]
+
+validation:
+  type: "purged_group_time_series"
+  n_splits: 5
+  test_size_days: 30
+  purge_buffer_hours: 24
+
+models:
+  xgboost:
+    n_estimators: 500
+    learning_rate: 0.05
+    max_depth: 6
+    subsample: 0.8
+    colsample_bytree: 0.8
+    random_state: 42
+    n_jobs: -1

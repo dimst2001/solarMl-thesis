@@ -1,0 +1,3 @@
+ac_power
+module_temp_1
+ac_voltage

@@ -1,0 +1,3 @@
+ac_power_W
+power_factor
+module_temp_C

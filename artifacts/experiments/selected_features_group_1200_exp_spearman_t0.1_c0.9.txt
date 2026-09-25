@@ -1,0 +1,5 @@
+inv3_dc_power
+inv1_temp
+module_temp_C
+wind_speed_mph
+inv2_dc_voltage

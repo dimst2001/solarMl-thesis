@@ -1,0 +1,9 @@
+dc_neg_current
+dc_pos_current
+ac_current
+poa_irradiance
+dc_pos_voltage
+dc_neg_voltage
+ac_power
+inveter_temp
+module_temp_3

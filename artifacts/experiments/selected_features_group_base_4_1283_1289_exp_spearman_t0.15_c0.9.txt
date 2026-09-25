@@ -1,0 +1,7 @@
+dc_pos_current
+module_temp_1
+ac_voltage
+ac_current
+dc_pos_voltage
+das_temp
+ambient_temp

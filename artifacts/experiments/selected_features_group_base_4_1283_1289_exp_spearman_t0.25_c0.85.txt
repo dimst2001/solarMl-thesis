@@ -1,0 +1,5 @@
+ac_power
+ac_voltage
+module_temp_1
+ac_current
+dc_pos_voltage

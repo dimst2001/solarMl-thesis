@@ -1,0 +1,13 @@
+ac_power
+ac_current
+dc_pos_current
+poa_irradiance
+module_temp_3
+module_temp_2
+module_temp_1
+inverter_temp
+dc_pos_voltage
+ac_voltage
+das_temp
+ambient_temp
+das_battery_voltage
