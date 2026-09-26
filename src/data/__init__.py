@@ -30,6 +30,7 @@ from src.data.feature_selection import (
     run_group_feature_selection,
     run_experimental_feature_selection,
 )
+from src.data.preparation import prepare_group_features
 
 __all__ = [
     "CLEANED_DIR",
@@ -41,4 +42,5 @@ __all__ = [
     "run_feature_selection_pipeline",
     "run_group_feature_selection",
     "run_experimental_feature_selection",
+    "prepare_group_features",
 ]
