@@ -84,23 +84,36 @@ def test_scale_and_export_fits_training_range_and_writes_group_files(tmp_path):
     y_test = pd.DataFrame({"dc_power": [30.0]}, index=test_index)
 
     outputs = scale_and_export_features(
-        X_train, X_test, y_train, y_test, group_id=1, project_root=tmp_path
+        X_train,
+        X_test,
+        y_train,
+        y_test,
+        group_name="group_4_1283_1289",
+        project_root=tmp_path,
     )
 
     assert outputs["X_train"]["feature"].tolist() == pytest.approx([0.0, 1.0])
     assert outputs["X_test"]["feature"].tolist() == pytest.approx([2.0])
-    feature_directory = tmp_path / "data" / "features" / "g1"
+    feature_directory = tmp_path / "data" / "features" / "group_4_1283_1289"
     for filename in ("X_train", "X_test", "y_train", "y_test"):
-        assert (feature_directory / f"{filename}.parquet").is_file()
-    scaler_path = tmp_path / "artifacts" / "models" / "scaler_g1.pkl"
+        assert (
+            feature_directory
+            / f"{filename}_group_4_1283_1289.csv"
+        ).is_file()
+    scaler_path = (
+        tmp_path / "artifacts" / "models" / "scaler_group_4_1283_1289.pkl"
+    )
     assert scaler_path.is_file()
     with scaler_path.open("rb") as scaler_file:
         scaler = pickle.load(scaler_file)
     assert scaler.data_min_.tolist() == pytest.approx([1.0])
-    assert pd.read_parquet(feature_directory / "y_test.parquet").index.equals(test_index)
+    saved_y_test = pd.read_csv(
+        feature_directory / "y_test_group_4_1283_1289.csv", index_col=0, parse_dates=True
+    )
+    assert saved_y_test.index.equals(test_index)
 
 
-def test_prepare_group_features_resolves_registry_and_sensor_suffixes(tmp_path):
+def test_prepare_group_features_maps_group_id_to_default_system_and_registry(tmp_path):
     cleaned_directory = tmp_path / "data" / "cleaned"
     registry_directory = (
         tmp_path / "artifacts" / "feature_selected_scatterplots-heatmaps"
@@ -116,14 +129,58 @@ def test_prepare_group_features_resolves_registry_and_sensor_suffixes(tmp_path):
             "sensor_a__3": [0.0, None, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0],
         }
     )
-    data.to_csv(cleaned_directory / "system_4_clean.csv", index=False)
+    data.to_csv(cleaned_directory / "system_34_clean.csv", index=False)
     (
-        registry_directory / "selected_features_group_4_1283_1289.txt"
+        registry_directory / "selected_features_group_34_35.txt"
     ).write_text("poa_irradiance\nsensor_a\n", encoding="utf-8")
 
-    outputs = prepare_group_features(group_id=1, system_id=4, project_root=tmp_path)
+    outputs = prepare_group_features(group_id=2, project_root=tmp_path)
 
     assert outputs["X_train"].shape == (7, 1)
     assert outputs["X_test"].shape == (2, 1)
     assert list(outputs["y_train"].columns) == ["dc_power", "poa_irradiance"]
-    assert outputs["registry_path"].name == "selected_features_group_4_1283_1289.txt"
+    assert outputs["group_id"] == 2
+    assert outputs["group_name"] == "group_34_35"
+    assert outputs["system_id"] == 34
+    assert outputs["registry_path"].name == "selected_features_group_34_35.txt"
+    assert outputs["feature_directory"].name == "group_34_35"
+    assert outputs["scaler_path"].name == "scaler_group_34_35.pkl"
+    assert outputs["output_paths"]["X_test"].name == "X_test_group_34_35.csv"
+
+
+def test_prepare_group_features_rejects_system_outside_selected_group():
+    with pytest.raises(ValueError, match="not in group_34_35"):
+        prepare_group_features(group_id=2, system_id=4)
+
+
+def test_prepare_group_features_combines_complementary_member_sensors(tmp_path):
+    cleaned_directory = tmp_path / "data" / "cleaned"
+    registry_directory = (
+        tmp_path / "artifacts" / "feature_selected_scatterplots-heatmaps"
+    )
+    cleaned_directory.mkdir(parents=True)
+    registry_directory.mkdir(parents=True)
+    timestamps = pd.date_range("2024-02-01", periods=10, freq="h")
+    base = {
+        "datetime": timestamps,
+        "dc_power__1": range(1, 11),
+        "poa_irradiance__2": range(10, 20),
+    }
+    pd.DataFrame({**base, "feature_a__3": range(10)}).to_csv(
+        cleaned_directory / "system_50_clean.csv", index=False
+    )
+    pd.DataFrame({**base, "feature_b__4": range(10, 20)}).to_csv(
+        cleaned_directory / "system_51_clean.csv", index=False
+    )
+    (registry_directory / "selected_features_group_50_51.txt").write_text(
+        "feature_a\nfeature_b\n", encoding="utf-8"
+    )
+
+    outputs = prepare_group_features(group_id=3, project_root=tmp_path)
+
+    assert outputs["systems_used"] == [50, 51]
+    assert list(outputs["X_train"].columns) == ["feature_a", "feature_b"]
+    assert outputs["X_train"].shape == (16, 2)
+    assert outputs["X_test"].shape == (4, 2)
+    assert not outputs["X_train"].isna().any().any()
+    assert not outputs["X_test"].isna().any().any()

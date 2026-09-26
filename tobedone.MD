@@ -3,20 +3,6 @@
 
 
 
-Notebook 2 — Data Preparation for ML
-
-Load selected features only
-
-Handle remaining NaN (fill or drop)
-
-Normalize/scale features (MinMaxScaler)
-
-Train/test split (80/20)
-
-Save ready-to-train arrays
-
-
-
 
 Notebook 3 — Regression Models
 

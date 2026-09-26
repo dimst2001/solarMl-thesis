@@ -12,12 +12,12 @@ def scale_and_export_features(
     X_test: pd.DataFrame,
     y_train: pd.DataFrame,
     y_test: pd.DataFrame,
-    group_id: int,
+    group_name: str,
     project_root: Path,
 ) -> dict[str, object]:
     """Fit MinMax scaling on training features and export aligned partitions."""
-    if not isinstance(group_id, int) or isinstance(group_id, bool) or group_id < 1:
-        raise ValueError("group_id must be a positive integer.")
+    if not group_name.startswith("group_") or not group_name.replace("_", "").isalnum():
+        raise ValueError("group_name must be a valid group name.")
     if list(X_train.columns) != list(X_test.columns):
         raise ValueError("Train and test feature columns must match in order.")
     if not X_train.index.equals(y_train.index):
@@ -44,7 +44,7 @@ def scale_and_export_features(
     )
 
     root = Path(project_root)
-    feature_directory = root / "data" / "features" / f"g{group_id}"
+    feature_directory = root / "data" / "features" / group_name
     model_directory = root / "artifacts" / "models"
     feature_directory.mkdir(parents=True, exist_ok=True)
     model_directory.mkdir(parents=True, exist_ok=True)
@@ -55,10 +55,13 @@ def scale_and_export_features(
         "y_train": y_train,
         "y_test": y_test,
     }
+    output_paths = {}
     for name, frame in partitions.items():
-        frame.to_parquet(feature_directory / f"{name}.parquet", index=True)
+        output_path = feature_directory / f"{name}_{group_name}.csv"
+        frame.to_csv(output_path, index=True)
+        output_paths[name] = output_path
 
-    scaler_path = model_directory / f"scaler_g{group_id}.pkl"
+    scaler_path = model_directory / f"scaler_{group_name}.pkl"
     with scaler_path.open("wb") as scaler_file:
         pickle.dump(scaler, scaler_file)
 
@@ -66,5 +69,6 @@ def scale_and_export_features(
         **partitions,
         "scaler": scaler,
         "feature_directory": feature_directory,
+        "output_paths": output_paths,
         "scaler_path": scaler_path,
     }

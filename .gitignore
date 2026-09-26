@@ -13,12 +13,10 @@ env/
 data/raw/
 data/processed/
 data/cleaned/
-data/features/
-*.parquet
 
 # Heavy ML Artifacts
 artifacts/models/*.json
-artifacts/models/*.pkl
+#artifacts/models/*.pkl
 artifacts/models/*.bin
 artifacts/models/*.joblib
 
