@@ -1,4 +1,0 @@
-ac_power
-poa_irradiance
-ac_voltage
-das_temp

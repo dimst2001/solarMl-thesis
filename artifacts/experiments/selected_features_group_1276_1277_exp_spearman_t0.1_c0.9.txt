@@ -1,9 +1,0 @@
-ac_power_W
-power_factor
-module_temp_C
-ac_voltage
-ambient_temp_C
-inverter_temp
-wind_speed_ms
-input_voltage
-relative_humidity

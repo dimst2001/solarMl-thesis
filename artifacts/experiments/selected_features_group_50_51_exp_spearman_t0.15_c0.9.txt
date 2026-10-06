@@ -1,6 +1,0 @@
-ac_current
-inveter_temp
-module_temp_3
-ac_volts
-inverter_temp_2
-module_temp_1

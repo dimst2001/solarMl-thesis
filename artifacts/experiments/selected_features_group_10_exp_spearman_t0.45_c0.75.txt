@@ -1,3 +1,0 @@
-ac_power
-module_temp_3
-ac_voltage

@@ -1,7 +1,0 @@
-ac_power
-poa_irradiance
-module_temp_2
-power_factor
-ac_voltage
-das_temp
-ambient_temp

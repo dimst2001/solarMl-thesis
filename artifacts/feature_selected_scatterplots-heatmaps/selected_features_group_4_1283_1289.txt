@@ -1,7 +1,0 @@
-ac_power
-poa_irradiance
-dc_pos_current
-module_temp_1
-dc_pos_voltage
-ac_current
-das_temp

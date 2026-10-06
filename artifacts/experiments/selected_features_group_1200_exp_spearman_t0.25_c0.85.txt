@@ -1,3 +1,0 @@
-inv3_dc_power
-module_temp_C
-wind_speed_mph

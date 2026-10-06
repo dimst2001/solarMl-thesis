@@ -11,8 +11,16 @@ Converted each daily parquet file from long format (one row per metric per times
 -----------------------------------------------------------------------
 4. Merging
 Merged all daily CSVs per system into one file per system using merge_systems.py. Output saved to merged/.
+
+---------------------------------------------------------------------------
+5. Environment Setup
+Python 3.12, virtual environment myenv
+Libraries: pandas, pyarrow, scikit-learn, matplotlib, seaborn, xgboost, jupyterlab
+VS Code + Jupyter kernel registered
+thesis/ folder created as clean GitHub repo
+
 --------------------------------------------------------------------------
-5. Data Cleaning (clean_systems.py)
+6. Data Cleaning (clean_systems.py)
 System by system:
 Replaced sentinel values (-99999, -7999) with NaN
 Converted Fahrenheit → Celsius (systems 34, 35, 1200, 1276, 1277)
@@ -22,59 +30,16 @@ Fixed wind_speed_mph × 0.447
 Dropped broken/constant sensors
 Clipped physically impossible values
 Resampled system_1283 from sub-minute → 1-minute
-Output saved to cleaned/
----------------------------------------------------------------------------
-6. Environment Setup
-Python 3.12, virtual environment myenv
-Libraries: pandas, pyarrow, scikit-learn, matplotlib, seaborn, xgboost, jupyterlab
-VS Code + Jupyter kernel registered
-thesis/ folder created as clean GitHub repo
+
+
 --------------------------------------------------------------------------
 
-
-7. Feature Selection & Artifact Generation (Notebook 1)
-- Initialized core data package (`src/data/feature_selection.py` and `__init__.py`) for modular execution[cite: 1].
-- Handled data cleaning edge cases: temporal datetime coercion, spatial averaging of duplicated duplicate sensors, and target variable aggregation (`dc_power` sum).
-- Clustered all 13 systems into 8 distinct hardware-specific groups to stabilize covariance matrices and feature registries.
-- Executed experimental feature selection tracking correlation metrics (Pearson/Spearman), multicollinearity pruning ($\rho_{max}$), and physical irradiance masking ($POA \ge 20 \ W/m^2$).
-- Generated baseline and experimental feature registries (`.txt`), correlation heatmaps, and scatter plots saved to `artifacts/` and `artifacts/experiments/`[cite: 1].
-- Locked optimal linear feature space parameters: Pearson $r$, Target $\ge 0.3$, Collinearity $\le 0.8$, Irradiance $\ge 20.0 \ W/m^2$.
-
-Rename columns (dc_power__314 → dc_power)
-
-Filter daytime rows (dc_power > 0)
-
-Basic statistics and distributions
-
-Pearson correlation with dc_power
-
-Correlation heatmap
-
-Scatter plots per feature
-
-Select final features (|r| ≥ 0.3)
-
-Validate on systems 10, 33, 50
-
-Save selected_features.txt
+Filter daytime rows (dc_power > 0)  
 
 ------------------------------------------------------------------------------------------
 
-8. Data Preprocessing — Training Splits (Notebook 2)
-- Added reusable preprocessing functions in `src/` and mapped the eight hardware groups to `GROUP_ID` values and Combined available member systems per group,
--  Hybrid imputation/drop : aligned selected features, dropped rows missing target values, and imputed missing features using training-only means.
-- Created chronological 80/20 train/test splits without shuffling and fitted `MinMaxScaler` on training features only.
-- Exported  group-named `X_train`, `X_test`, `y_train`, and `y_test` CSV files to `data/features/<group_name>/`, with the fitted scaler saved to `artifacts/models/scaler_<group_name>.pkl` for 8 groups .
 
-Load selected features only
 
-Handle remaining NaN (fill or drop)
-
-Normalize/scale features (MinMaxScaler)
-
-Train/test split (80/20)
-
-Save ready-to-train arrays
 
 --------------------------------------------------------------------
 What You Have Now

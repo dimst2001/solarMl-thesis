@@ -1,0 +1,3034 @@
+============================================================
+PVDAQ — System Sensors Overview
+Reading from: /home/raul/Desktop/solar-data-all/metrics
+============================================================
+Found 160 metric files
+
+============================================================
+System ID : 10
+Name      : DC power
+Sensors   : 14
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • ac_current                          [A]   AC current
+  • ac_voltage                          [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+============================================================
+System ID : 1199
+Name      : AC power
+Sensors   : 37
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_ac_power                       [W]   AC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_ac_power                       [W]   AC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_ac_power                       [W]   AC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_ac_power                       [W]   AC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_ac_power                       [W]   AC power
+  • inv6_dc_power                       [W]   DC power
+  • inv7_ac_power                       [W]   AC power
+  • inv7_dc_power                       [W]   DC power
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • inv3_dc_current                     [A]   DC current
+  • inv4_dc_current                     [A]   DC current
+  • inv5_dc_current                     [A]   DC current
+  • inv6_dc_current                     [A]   DC current
+  • inv7_dc_current                     [A]   DC current
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • inv3_temp                           [C]   Temperature inverter
+  • inv5_temp                           [C]   Temperature inverter
+  • inv6_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+  • inv7_dc_voltage                     [V]   DC voltage
+  • inv4_dc_temp                        [C]   Temperature other
+  • inv7_temp                           [C]   Temperature other
+============================================================
+System ID : 1200
+Name      : AC power
+Sensors   : 39
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_ac_power                       [W]   AC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_ac_power                       [W]   AC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_ac_power                       [W]   AC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_ac_power                       [W]   AC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_ac_power                       [W]   AC power
+  • inv6_dc_power                       [W]   DC power
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • inv3_dc_current                     [A]   DC current
+  • inv4_dc_current                     [A]   DC current
+  • inv5_dc_current                     [A]   DC current
+  • inv6_dc_current                     [A]   DC current
+  • ac_power_metered_kW                 [W]   AC power
+  • ac_frequency                        [Hz]   AC other
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • inv3_temp                           [C]   Temperature inverter
+  • inv4_temp                           [C]   Temperature inverter
+  • inv5_temp                           [C]   Temperature inverter
+  • inv6_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+  • power_factor                        [-]   AC other
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1201
+Name      : DC power
+Sensors   : 13
+------------------------------------------------------------
+  • dc_power_hW                         [W]   DC power
+  • ac_power_hW                         [W]   AC power
+  • ac_current                          [A]   AC current
+  • dc_current                          [A]   DC current
+  • power_factor                        [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_K                       [C]   Temperature module
+  • ambient_temp_K                      [C]   Temperature ambient
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_voltage                          [V]   DC voltage
+  • inverter_error_code                 [-]   System status
+  • wind_speed                          [m/s]   Wind speed
+============================================================
+System ID : 1202
+Name      : AC power
+Sensors   : 40
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_ac_power                       [W]   AC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_ac_power                       [W]   AC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_ac_power                       [W]   AC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_ac_power                       [W]   AC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_ac_power                       [W]   AC power
+  • inv6_dc_power                       [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_current                          [A]   AC current
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • inv3_dc_current                     [A]   DC current
+  • inv4_dc_current                     [A]   DC current
+  • inv5_dc_current                     [A]   DC current
+  • inv6_dc_current                     [A]   DC current
+  • ac_power_metered_kW                 [W]   AC power
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_K                       [C]   Temperature module
+  • ambient_temp_K                      [C]   Temperature ambient
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • inv3_temp                           [C]   Temperature inverter
+  • inv4_temp                           [C]   Temperature inverter
+  • inv5_temp                           [C]   Temperature inverter
+  • inv6_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+  • power_factor                        [-]   AC other
+  • wind_speed                          [m/s]   Wind speed
+============================================================
+System ID : 1203
+Name      : AC power
+Sensors   : 23
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_power_hW                    [W]   AC power
+  • inv1_dc_power_hW                    [W]   DC power
+  • inv2_ac_power_hW                    [W]   AC power
+  • inv2_dc_power_hW                    [W]   DC power
+  • ac_inverter_power                   [W]   AC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • ac_meter_1_power_kW                 [W]   AC power
+  • ac_meter_2_power_kW                 [W]   AC power
+  • inv1_power_factor                   [-]   AC other
+  • inv2_power_factor                   [-]   AC other
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • gh_irradiance                       [W/m^2]   Irradiance GHI
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • inv1_error_code                     [-]   System status
+  • inv2_error_code                     [-]   System status
+============================================================
+System ID : 1204
+Name      : AC power
+Sensors   : 42
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_ac_power                       [W]   AC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_ac_power                       [W]   AC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_ac_power                       [W]   AC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_ac_power                       [W]   AC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_ac_power                       [W]   AC power
+  • inv6_dc_power                       [W]   DC power
+  • inv7_ac_power                       [W]   AC power
+  • inv7_dc_power                       [W]   DC power
+  • inv8_ac_power                       [W]   AC power
+  • inv8_dc_power                       [W]   DC power
+  • inv9_ac_power                       [W]   AC power
+  • inv9_dc_power                       [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • inv3_dc_current                     [A]   DC current
+  • inv4_dc_current                     [A]   DC current
+  • inv5_dc_current                     [A]   DC current
+  • inv6_dc_current                     [A]   DC current
+  • inv7_dc_current                     [A]   DC current
+  • inv8_dc_current                     [A]   DC current
+  • inv9_dc_current                     [A]   DC current
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+  • inv7_dc_voltage                     [V]   DC voltage
+  • inv8_dc_voltage                     [V]   DC voltage
+  • inv9_dc_voltage                     [V]   DC voltage
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1207
+Name      : DC power
+Sensors   : 16
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • dc_power_A1                         [-]   DC power
+  • dc_power_A2                         [-]   DC power
+  • dc_power_B1                         [-]   DC power
+  • dc_power_B2                         [-]   DC power
+  • dc_power_C1                         [-]   DC power
+  • dc_power_C2                         [-]   DC power
+  • poa_irradiance_cs300_1              [W/m^2]   Irradiance POA
+  • poa_irradiance_cs300_2              [W/m^2]   Irradiance POA
+  • poa_irradiance_lp02_2               [W/m^2]   Irradiance POA
+  • direct_normal_dr01                  [-]   Irradiance DNI
+  • dc_voltage_A                        [-]   DC voltage
+  • dc_voltage_B                        [-]   DC voltage
+  • dc_voltage_C                        [-]   DC voltage
+============================================================
+System ID : 1208
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • inv1_dc_power                       [W]   DC power
+  • inv2_dc_power                       [W]   DC power
+  • dc_power                            [W]   DC power
+  • ac_power_metered_1_2                [W]   AC power
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • ac_power_metered_kW                 [W]   AC power
+  • ac_meter_1_power_kW                 [W]   AC power
+  • ac_meter_2_power_kW                 [W]   AC power
+  • inv1_ac_power_kW                    [W]   AC power
+  • inv2_ac_power_kW                    [W]   AC power
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+============================================================
+System ID : 1214
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1216
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • Wh_n_sum                            [kWh]   AC other
+  • W_n_avg                             [W]   AC other
+============================================================
+System ID : 1217
+Name      : AC current other
+Sensors   : 5
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+  • module_temp_2                       [C]   Temperature module
+============================================================
+System ID : 1218
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • Wh_n_sum                            [kWh]   AC other
+  • W_n_avg                             [W]   AC other
+  • module_temp_3                       [C]   Temperature module
+============================================================
+System ID : 1219
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1220
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • Wh_n_sum                            [kWh]   AC other
+  • W_n_avg                             [W]   AC other
+============================================================
+System ID : 1221
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1222
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1223
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1224
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1225
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1226
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1228
+Name      : Temperature module
+Sensors   : 13
+------------------------------------------------------------
+  • module_temp_5                       [C]   Temperature module
+  • module_temp_6                       [C]   Temperature module
+  • module_temp_7                       [C]   Temperature module
+  • module_temp_8                       [C]   Temperature module
+  • module_temp_9                       [C]   Temperature module
+  • module_temp_10                      [C]   Temperature module
+  • module_temp_11                      [C]   Temperature module
+  • module_temp_12                      [C]   Temperature module
+  • module_temp_13                      [C]   Temperature module
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+============================================================
+System ID : 1229
+Name      : DC power
+Sensors   : 10
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • poa_irradiance_south_array          [W/m^2]   Irradiance POA
+  • poa_irradiance_west_array           [W/m^2]   Irradiance POA
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • gh_irradiance                       [W/m^2]   Irradiance GHI
+  • module_temp_south_F                 [C]   Temperature module
+  • module_temp_west_F                  [C]   Temperature module
+  • relative_humidity                   [-]   Humidity
+  • dc_voltage                          [V]   DC voltage
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1230
+Name      : DC power
+Sensors   : 5
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • ambient_temp_1_F                    [C]   Temperature ambient
+  • ambient_temp_2_F                    [C]   Temperature ambient
+  • relative_humidity                   [-]   Humidity
+============================================================
+System ID : 1231
+Name      : AC power
+Sensors   : 4
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • gh_irradiance                       [W/m^2]   Irradiance GHI
+  • ambient_temp_F                      [C]   Temperature ambient
+============================================================
+System ID : 1239
+Name      : AC power
+Sensors   : 8
+------------------------------------------------------------
+  • ac_power_metered_kW                 [W]   AC power
+  • total_energy_kWh                    [kWh]   AC energy
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • relative_humidity                   [%]   Humidity
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 1244
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1245
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1246
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1248
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1249
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1250
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1251
+Name      : AC current
+Sensors   : 4
+------------------------------------------------------------
+  • ac_current                          [A]   AC current
+  • ac_power_kW                         [W]   AC power
+  • ac_voltage                          [V]   AC voltage
+  • energy                              [-]   AC energy
+============================================================
+System ID : 1252
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1253
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1254
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1255
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1256
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1257
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1258
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1259
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1260
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1261
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1262
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1263
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1264
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1265
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1266
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1267
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1268
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1269
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1270
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1271
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1272
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1273
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1274
+Name      : AC current other
+Sensors   : 4
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • PPV_avg                             [V]   AC voltage
+  • W_avg                               [W]   AC power
+  • Wh_sum                              [kWh]   AC energy
+============================================================
+System ID : 1275
+Name      : AC current
+Sensors   : 3
+------------------------------------------------------------
+  • ac_current                          [A]   AC current
+  • ac_power_metered_kW                 [W]   AC power
+  • ac_voltage                          [V]   AC voltage
+============================================================
+System ID : 1276
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power_hW                         [W]   DC power
+  • ac_power_hW                         [W]   AC power
+  • ac_current                          [A]   AC current
+  • power_factor                        [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inverter_temp                       [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • input_voltage                       [V]   DC voltage
+  • input_current                       [A]   DC current
+  • inverter_error_code                 [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 1277
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power_hW                         [W]   DC power
+  • ac_power_hW                         [W]   AC power
+  • ac_current                          [A]   AC current
+  • power_factor                        [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inverter_temp                       [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • input_voltage                       [V]   DC voltage
+  • input_current                       [A]   DC current
+  • inverter_error_code                 [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 1278
+Name      : DC power
+Sensors   : 26
+------------------------------------------------------------
+  • inv1_dc_power_hW                    [W]   DC power
+  • inv1_ac_power_hW                    [W]   AC power
+  • inv2_dc_power_hW                    [W]   DC power
+  • inv2_ac_power_hW                    [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • inv1_power_factor                   [-]   AC other
+  • inv2_power_factor                   [-]   AC other
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • inv1_input_voltage                  [V]   DC voltage
+  • inv2_input_voltage                  [V]   DC voltage
+  • inv1_input_current                  [A]   DC current
+  • inv2_input_current                  [A]   DC current
+  • inv1_error_code                     [-]   System status
+  • inv2_error_code                     [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 1283
+Name      : DC power
+Sensors   : 21
+------------------------------------------------------------
+  • inv1_dc_power                       [W]   DC power
+  • inv2_dc_power                       [W]   DC power
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • ac_power_metered_kW                 [W]   AC power
+  • ac_meter_1_power_kW                 [W]   AC power
+  • ac_meter_2_power_kW                 [W]   AC power
+  • inv1_ac_power_kW                    [W]   AC power
+  • inv2_ac_power_kW                    [W]   AC power
+  • POA_irradiance                      [W/m^2]   Irradiance POA
+  • POA_irradiance_refcell              [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • inv1_temp                           [C]   Temperature inverter
+  • inv2_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • refcell_temp                        [C]   Temperature refdevice
+  • wind_speed                          [m/s]   Wind speed
+============================================================
+System ID : 1284
+Name      : DC power
+Sensors   : 18
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • ac_current                          [A]   AC current
+  • power_factor                        [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • poa_irradiance_2                    [W/m^2]   Irradiance POA
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_pos_voltage                      [V]   DC voltage
+  • reference_cell_temperature          [C]   Temperature refdevice
+  • das_temp                            [C]   Temperature panel
+  • das_temp_2                          [C]   Temperature panel
+============================================================
+System ID : 1289
+Name      : DC power
+Sensors   : 18
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • ac_current                          [A]   AC current
+  • ac_voltage                          [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+  • power_factor                        [-]   AC other
+  • poa_irradiance_2                    [W/m^2]   Irradiance POA
+  • das_temp_2                          [C]   Temperature panel
+============================================================
+System ID : 1294
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1295
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1296
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1297
+Name      : Temperature module
+Sensors   : 4
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1298
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1299
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1300
+Name      : AC power
+Sensors   : 12
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power_calc                       [W]   DC power
+  • ac_current                          [A]   AC current
+  • dc_current                          [A]   DC current
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage                          [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1301
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1302
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1303
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1304
+Name      : Temperature module
+Sensors   : 4
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1305
+Name      : AC current
+Sensors   : 26
+------------------------------------------------------------
+  • ac_current_1                        [A]   AC current
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • ac_current_2                        [A]   AC current
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_power_2_calc                     [W]   DC power
+  • ac_current_3                        [A]   AC current
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_power_3_calc                     [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1306
+Name      : DC current
+Sensors   : 37
+------------------------------------------------------------
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_current_4                        [A]   DC current
+  • ac_power_4                          [W]   AC power
+  • dc_current_5                        [A]   DC current
+  • ac_power_5                          [W]   AC power
+  • dc_current_6                        [A]   DC current
+  • ac_power_6                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • dc_power_2_calc                     [W]   DC power
+  • dc_power_3_calc                     [W]   DC power
+  • dc_power_4_calc                     [W]   DC power
+  • dc_power_5_calc                     [W]   DC power
+  • dc_power_6_calc                     [W]   DC power
+  • ac_power_1_6                        [W]   AC power
+  • dc_power_1_6                        [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • ac_voltage_4                        [V]   AC voltage
+  • ac_voltage_5                        [V]   AC voltage
+  • ac_voltage_6                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • dc_voltage_4                        [V]   DC voltage
+  • dc_voltage_5                        [V]   DC voltage
+  • dc_voltage_6                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1307
+Name      : AC current
+Sensors   : 26
+------------------------------------------------------------
+  • ac_current_1                        [A]   AC current
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • ac_current_2                        [A]   AC current
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_power_2_calc                     [W]   DC power
+  • ac_current_3                        [A]   AC current
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_power_3_calc                     [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1308
+Name      : AC current
+Sensors   : 26
+------------------------------------------------------------
+  • ac_current_1                        [A]   AC current
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • ac_current_2                        [A]   AC current
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_power_2_calc                     [W]   DC power
+  • ac_current_3                        [A]   AC current
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_power_3_calc                     [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1309
+Name      : Temperature module
+Sensors   : 5
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1310
+Name      : DC current
+Sensors   : 38
+------------------------------------------------------------
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_current_4                        [A]   DC current
+  • ac_power_4                          [W]   AC power
+  • dc_current_5                        [A]   DC current
+  • ac_power_5                          [W]   AC power
+  • dc_current_6                        [A]   DC current
+  • ac_power_6                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • dc_power_2_calc                     [W]   DC power
+  • dc_power_3_calc                     [W]   DC power
+  • dc_power_4_calc                     [W]   DC power
+  • dc_power_5_calc                     [W]   DC power
+  • dc_power_6_calc                     [W]   DC power
+  • ac_power_1_6                        [W]   AC power
+  • dc_power_1_6                        [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • ac_voltage_4                        [V]   AC voltage
+  • ac_voltage_5                        [V]   AC voltage
+  • ac_voltage_6                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • dc_voltage_4                        [V]   DC voltage
+  • dc_voltage_5                        [V]   DC voltage
+  • dc_voltage_6                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1311
+Name      : Temperature module
+Sensors   : 4
+------------------------------------------------------------
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1312
+Name      : AC current
+Sensors   : 26
+------------------------------------------------------------
+  • ac_current_1                        [A]   AC current
+  • dc_current_1                        [A]   DC current
+  • ac_power_1                          [W]   AC power
+  • dc_power_1_calc                     [W]   DC power
+  • ac_current_2                        [A]   AC current
+  • dc_current_2                        [A]   DC current
+  • ac_power_2                          [W]   AC power
+  • dc_power_2_calc                     [W]   DC power
+  • ac_current_3                        [A]   AC current
+  • dc_current_3                        [A]   DC current
+  • ac_power_3                          [W]   AC power
+  • dc_power_3_calc                     [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_frequency                        [Hz]   AC other
+  • ac_voltage_1                        [V]   AC voltage
+  • ac_voltage_2                        [V]   AC voltage
+  • ac_voltage_3                        [V]   AC voltage
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • IntSolIrrad                         [W/m^2]   Irradiance POA
+  • error                               [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1314
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1315
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1316
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1317
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1318
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1319
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1320
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1321
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1322
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1323
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1324
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1325
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1326
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1327
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1328
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1329
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1330
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1331
+Name      : AC other
+Sensors   : 3
+------------------------------------------------------------
+  • VATotal                             [VA]   AC other
+  • RTW                                 [W]   AC power
+  • WHTotal                             [Wh]   AC energy
+============================================================
+System ID : 1332
+Name      : DC current
+Sensors   : 22
+------------------------------------------------------------
+  • inv1_dc_current                     [A]   DC current
+  • inv2_dc_current                     [A]   DC current
+  • inv3_dc_current                     [A]   DC current
+  • meter3_ac_power                     [W]   AC power
+  • meter2_ac_power                     [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_dc_power                       [W]   DC power
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • inv3_ac_power                       [W]   AC power
+  • meter1_ac_power                     [W]   AC power
+  • metered_ac_power                    [W]   AC power
+  • inv_total_ac_power                  [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • String1Current_unshaded             [A]   DC current other
+  • String2Current_unshaded             [A]   DC current other
+  • String11Current_shaded              [A]   DC current other
+  • String12Current_shaded              [A]   DC current other
+============================================================
+System ID : 1334
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1335
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1336
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1337
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1338
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1339
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1340
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1341
+Name      : AC current
+Sensors   : 4
+------------------------------------------------------------
+  • ac_current                          [A]   AC current
+  • ac_power_kW                         [W]   AC power
+  • ac_voltage                          [V]   AC voltage
+  • energy                              [-]   AC energy
+============================================================
+System ID : 1342
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1343
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1344
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1345
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1346
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1347
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1348
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1349
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1350
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1351
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1352
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1353
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1354
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1355
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1356
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1357
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1358
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1359
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1360
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1361
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1362
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1363
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1364
+Name      : AC current other
+Sensors   : 3
+------------------------------------------------------------
+  • A_avg                               [A]   AC current other
+  • W_n_avg                             [W]   AC other
+  • Wh_n_sum                            [kWh]   AC other
+============================================================
+System ID : 1367
+Name      : AC power
+Sensors   : 14
+------------------------------------------------------------
+  • ac_power_1                          [W]   AC power
+  • ac_power_2                          [W]   AC power
+  • ac_power_3                          [W]   AC power
+  • ac_power                            [W]   AC power
+  • ac_frequency_1                      [Hz]   AC other
+  • ac_frequency_2                      [Hz]   AC other
+  • ac_frequency_3                      [Hz]   AC other
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_K                       [C]   Temperature module
+  • ambient_temp_K                      [C]   Temperature ambient
+  • dc_voltage_1                        [V]   DC voltage
+  • dc_voltage_2                        [V]   DC voltage
+  • dc_voltage_3                        [V]   DC voltage
+  • wind_speed_mph                      [m/s]   Wind speed
+============================================================
+System ID : 1368
+Name      : DC power
+Sensors   : 39
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • inv3_ac_power                       [W]   AC power
+  • inv4_ac_power                       [W]   AC power
+  • inv5_ac_power                       [W]   AC power
+  • inv6_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_dc_power                       [W]   DC power
+  • inv1_dc_current                     [A]   DC current
+  • inv1_ac_current                     [A]   AC current
+  • inv2_dc_current                     [A]   DC current
+  • inv2_ac_current                     [A]   AC current
+  • inv3_dc_current                     [A]   DC current
+  • inv3_ac_current                     [A]   AC current
+  • inv4_dc_current                     [A]   DC current
+  • inv4_ac_current                     [A]   AC current
+  • inv5_dc_current                     [A]   DC current
+  • inv5_ac_current                     [A]   AC current
+  • inv6_dc_current                     [A]   DC current
+  • inv6_ac_current                     [A]   AC current
+  • ac_frequency                        [Hz]   AC other
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • inv3_ac_voltage                     [V]   AC voltage
+  • inv4_ac_voltage                     [V]   AC voltage
+  • inv5_ac_voltage                     [V]   AC voltage
+  • inv6_ac_voltage                     [V]   AC voltage
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+============================================================
+System ID : 1369
+Name      : DC power
+Sensors   : 51
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • inv3_ac_power                       [W]   AC power
+  • inv4_ac_power                       [W]   AC power
+  • inv5_ac_power                       [W]   AC power
+  • inv6_ac_power                       [W]   AC power
+  • inv7_ac_power                       [W]   AC power
+  • inv8_ac_power                       [W]   AC power
+  • inv9_ac_power                       [W]   AC power
+  • inv1_dc_power                       [W]   DC power
+  • inv2_dc_power                       [W]   DC power
+  • inv3_dc_power                       [W]   DC power
+  • inv4_dc_power                       [W]   DC power
+  • inv5_dc_power                       [W]   DC power
+  • inv6_dc_power                       [W]   DC power
+  • inv7_dc_power                       [W]   DC power
+  • inv8_dc_power                       [W]   DC power
+  • inv9_dc_power                       [W]   DC power
+  • inv1_dc_current                     [A]   DC current
+  • inv1_ac_current                     [A]   AC current
+  • inv2_dc_current                     [A]   DC current
+  • inv2_ac_current                     [A]   AC current
+  • inv3_dc_current                     [A]   DC current
+  • inv3_ac_current                     [A]   AC current
+  • inv4_dc_current                     [A]   DC current
+  • inv4_ac_current                     [A]   AC current
+  • inv5_dc_current                     [A]   DC current
+  • inv5_ac_current                     [A]   AC current
+  • inv6_dc_current                     [A]   DC current
+  • inv6_ac_current                     [A]   AC current
+  • inv7_dc_current                     [A]   DC current
+  • inv7_ac_current                     [A]   AC current
+  • inv8_dc_current                     [A]   DC current
+  • inv8_ac_current                     [A]   AC current
+  • inv9_dc_current                     [A]   DC current
+  • inv9_ac_current                     [A]   AC current
+  • inv1_ac_power_kW                    [W]   AC power
+  • ac_frequency                        [Hz]   AC other
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2-9_ac_voltage                   [V]   AC voltage
+  • inv1_temp                           [C]   Temperature inverter
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv3_dc_voltage                     [V]   DC voltage
+  • inv4_dc_voltage                     [V]   DC voltage
+  • inv5_dc_voltage                     [V]   DC voltage
+  • inv6_dc_voltage                     [V]   DC voltage
+  • inv7_dc_voltage                     [V]   DC voltage
+  • inv8_dc_voltage                     [V]   DC voltage
+  • inv9_dc_voltage                     [V]   DC voltage
+============================================================
+System ID : 1403
+Name      : AC power
+Sensors   : 26
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_5                       [C]   Temperature module
+  • module_temp_6                       [C]   Temperature module
+  • module_temp_7                       [C]   Temperature module
+  • module_temp_8                       [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv1_dc_current1                    [-]   DC current
+  • inv1_dc_current2                    [-]   DC current
+  • inv2_dc_current1                    [-]   DC current
+  • inv2_dc_current2                    [-]   DC current
+  • poa_irradiance_refcell1             [W/m^2]   Irradiance POA
+  • poa_irradiance_refcell2             [W/m^2]   Irradiance POA
+============================================================
+System ID : 1416
+Name      : DC power
+Sensors   : 32
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_current_phA                      [A]   AC current
+  • ac_current_phB                      [A]   AC current
+  • ac_current_phC                      [A]   AC current
+  • ac_current                          [A]   AC current
+  • power_factor                        [-]   AC other
+  • power_factor_phA                    [-]   AC other
+  • power_factor_phB                    [-]   AC other
+  • power_factor_phC                    [-]   AC other
+  • apparent_power_kVA                  [VA]   AC other
+  • reactive_power_kVAR                 [VAR]   AC other
+  • ac_voltage_LtoL                     [V]   AC voltage
+  • ac_voltage_LtoN                     [V]   AC voltage
+  • ac_voltage_AB                       [V]   AC voltage
+  • ac_voltage_BC                       [V]   AC voltage
+  • ac_voltage_AC                       [V]   AC voltage
+  • ac_voltage_AN                       [V]   AC voltage
+  • ac_voltage_BN                       [V]   AC voltage
+  • ac_voltage_CN                       [V]   AC voltage
+  • dc_current_positive                 [A]   DC current
+  • dc_current_negative                 [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • dc_power_negative                   [W]   DC power
+  • dc_power_positive                   [W]   DC power
+  • dc_voltage_positive                 [V]   DC voltage
+  • dc_voltage_negative                 [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+  • enclosure_temp                      [C]   Temperature enclosure
+  • real_power_kW                       [W]   AC power other
+  • real_power_phA_kW                   [W]   AC power other
+  • real_power_phB_kW                   [W]   AC power other
+  • real_power_phC_kW                   [W]   AC power other
+============================================================
+System ID : 1418
+Name      : AC power
+Sensors   : 12
+------------------------------------------------------------
+  • ac_power_1_KwAC                     [W]   AC power
+  • ac_power_2_KwAC                     [W]   AC power
+  • ac_power_3_KwAC                     [W]   AC power
+  • poa_irradiance_Sun                  [W/m^2]   Irradiance POA
+  • module_temp_F_Temp2                 [C]   Temperature module
+  • ambient_temp_F_TempF                [C]   Temperature ambient
+  • ac_power                            [W]   AC power
+  • ac_kwhr_1_KwhAC                     [kWh]   AC energy
+  • ac_kwhr_2_KwhAC                     [kWh]   AC energy
+  • ac_kwhr_3_KwhAC                     [kWh]   AC energy
+  • wind_speed_mph_WindSpeed            [m/s]   Wind speed
+  • wind_direction_WindDirection        [degrees]   Wind direction
+============================================================
+System ID : 1419
+Name      : AC power
+Sensors   : 14
+------------------------------------------------------------
+  • ac_power_1_KwAC                     [W]   AC power
+  • ac_power_2_KwAC                     [W]   AC power
+  • dc_current_1_Idc                    [A]   DC current
+  • dc_current_2_Idc                    [A]   DC current
+  • poa_irradiance_Sun                  [W/m^2]   Irradiance POA
+  • ambient_temp_F_TempF                [C]   Temperature ambient
+  • dc_voltage_1_Vdc                    [V]   DC voltage
+  • dc_voltage_2_Vdc                    [V]   DC voltage
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • ac_kwhr_1_KwhAC                     [kWh]   AC energy
+  • ac_kwhr_2_KwhAC                     [kWh]   AC energy
+  • wind_speed_mph_WindSpeed            [m/s]   Wind speed
+  • wind_direction_WindDirection        [degrees]   Wind direction
+============================================================
+System ID : 1420
+Name      : AC power
+Sensors   : 9
+------------------------------------------------------------
+  • ac_power_KwAC                       [W]   AC power
+  • dc_current_I2                       [A]   DC current
+  • ac_current_Iac                      [A]   AC current
+  • ac_voltage_Vac                      [V]   AC voltage
+  • poa_irradiance_Sun                  [W/m^2]   Irradiance POA
+  • module_temp_F_Temp1                 [C]   Temperature module
+  • dc_voltage_Vdc                      [V]   DC voltage
+  • dc_power                            [W]   DC power
+  • ac_kwhr_KwhAC                       [kWh]   AC energy
+============================================================
+System ID : 1422
+Name      : AC power
+Sensors   : 26
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_5                       [C]   Temperature module
+  • module_temp_6                       [C]   Temperature module
+  • module_temp_7                       [C]   Temperature module
+  • module_temp_8                       [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv1_dc_current1                    [-]   DC current
+  • inv1_dc_current2                    [-]   DC current
+  • inv2_dc_current1                    [-]   DC current
+  • inv2_dc_current2                    [-]   DC current
+  • poa_irradiance_refcell1             [W/m^2]   Irradiance POA
+  • poa_irradiance_refcell2             [W/m^2]   Irradiance POA
+============================================================
+System ID : 1423
+Name      : AC power
+Sensors   : 26
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_5                       [C]   Temperature module
+  • module_temp_6                       [C]   Temperature module
+  • module_temp_7                       [C]   Temperature module
+  • module_temp_8                       [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv1_dc_current1                    [-]   DC current
+  • inv1_dc_current2                    [-]   DC current
+  • inv2_dc_current1                    [-]   DC current
+  • inv2_dc_current2                    [-]   DC current
+  • poa_irradiance_refcell1             [W/m^2]   Irradiance POA
+  • poa_irradiance_refcell2             [W/m^2]   Irradiance POA
+============================================================
+System ID : 1429
+Name      : AC power
+Sensors   : 26
+------------------------------------------------------------
+  • inv1_ac_power                       [W]   AC power
+  • inv2_ac_power                       [W]   AC power
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • inv1_ac_current                     [A]   AC current
+  • inv2_ac_current                     [A]   AC current
+  • inv1_ac_voltage                     [V]   AC voltage
+  • inv2_ac_voltage                     [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_5                       [C]   Temperature module
+  • module_temp_6                       [C]   Temperature module
+  • module_temp_7                       [C]   Temperature module
+  • module_temp_8                       [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • module_temp_4                       [C]   Temperature module
+  • inv1_dc_voltage                     [V]   DC voltage
+  • inv2_dc_voltage                     [V]   DC voltage
+  • inv1_dc_current1                    [-]   DC current
+  • inv1_dc_current2                    [-]   DC current
+  • inv2_dc_current1                    [-]   DC current
+  • inv2_dc_current2                    [-]   DC current
+  • poa_irradiance_refcell1             [W/m^2]   Irradiance POA
+  • poa_irradiance_refcell2             [W/m^2]   Irradiance POA
+============================================================
+System ID : 1430
+Name      : AC power
+Sensors   : 11
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • dc_current                          [A]   DC current
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • dc_voltage                          [V]   DC voltage
+  • PR                                  [-]   PR
+  • kWh_net                             [-]   AC energy other
+  • kWh_gross                           [-]   AC energy other
+  • wind_speed                          [m/s]   Wind speed
+============================================================
+System ID : 1431
+Name      : AC power
+Sensors   : 11
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • dc_power                            [W]   DC power
+  • dc_current                          [A]   DC current
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • dc_voltage                          [V]   DC voltage
+  • PR                                  [-]   PR
+  • kWh_net                             [-]   AC energy other
+  • kWh_gross                           [-]   AC energy other
+  • wind_speed                          [m/s]   Wind speed
+============================================================
+System ID : 1432
+Name      : AC power
+Sensors   : 7
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • dc_voltage                          [V]   DC voltage
+  • kWh_net                             [kWh]   AC energy other
+  • PR                                  [-]   PR
+============================================================
+System ID : 1433
+Name      : AC power
+Sensors   : 8
+------------------------------------------------------------
+  • ac_power                            [W]   AC power
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp                         [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • dc_voltage                          [V]   DC voltage
+  • kWh_net                             [kWh]   AC energy other
+  • kWh_gross                           [kWh]   AC energy other
+  • PR                                  [-]   PR
+============================================================
+System ID : 2
+Name      : DC power
+Sensors   : 7
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_1                       [C]   Temperature module
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+============================================================
+System ID : 2045
+Name      : Irradiance GHI
+Sensors   : 8
+------------------------------------------------------------
+  • irradiance_global_1                 [W/m^2]   Irradiance GHI
+  • irradiance_albedo_2                 [W/m^2]   Irradiance albedo
+  • irradiance_global_3                 [W/m^2]   Irradiance GHI
+  • irradiance_albedo_3                 [W/m^2]   Irradiance albedo
+  • irradiance_albedo_1                 [W/m^2]   Irradiance albedo
+  • irradiance_global_2                 [W/m^2]   Irradiance GHI
+  • battery_voltage                     [V]   DC voltage
+  • ptemp                               [C]   Temperature other
+============================================================
+System ID : 3
+Name      : DC power
+Sensors   : 7
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_1                       [C]   Temperature module
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+============================================================
+System ID : 33
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • ac_current                          [A]   AC current
+  • ac_voltage                          [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+  • power_factor                        [-]   AC other
+============================================================
+System ID : 34
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power_hW                         [W]   DC power
+  • ac_power_hW                         [W]   AC power
+  • dc_current                          [A]   DC current
+  • ac_current                          [A]   AC current
+  • power_factor_1000                   [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inverter_temp                       [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • dc_voltage                          [V]   DC voltage
+  • inverter_error_code                 [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 35
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power_hW                         [W]   DC power
+  • ac_power_hW                         [W]   AC power
+  • dc_current                          [A]   DC current
+  • ac_current                          [A]   AC current
+  • power_factor_1000                   [-]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • module_temp_F                       [C]   Temperature module
+  • ambient_temp_F                      [C]   Temperature ambient
+  • inverter_temp                       [C]   Temperature inverter
+  • relative_humidity                   [%]   Humidity
+  • dc_voltage                          [V]   DC voltage
+  • inverter_error_code                 [-]   System status
+  • wind_speed_mph                      [m/s]   Wind speed
+  • wind_direction                      [degrees]   Wind direction
+============================================================
+System ID : 36
+Name      : DC power
+Sensors   : 36
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_current                          [A]   DC current
+  • ac_current                          [A]   AC current
+  • ac_voltage                          [V]   AC voltage
+  • poa_irradiance_1                    [W/m^2]   Irradiance POA
+  • poa_irradiance_2                    [W/m^2]   Irradiance POA
+  • module8_temp_Top                    [C]   Temperature module
+  • module8_temp_Mid                    [C]   Temperature module
+  • module8_temp_Bot                    [C]   Temperature module
+  • ambient_temp                        [C]   Temperature ambient
+  • inv_temp                            [C]   Temperature inverter
+  • dc_voltage                          [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+  • Module3_Temp                        [C]   Temperature module
+  • Module10NW_Temp                     [C]   Temperature module
+  • Module6NE_Temp                      [C]   Temperature module
+  • Module1SW_Temp                      [C]   Temperature module
+  • Module5SE_Temp                      [C]   Temperature module
+  • reflector_temp_1                    [C]   Temperature other
+  • module_current_1                    [A]   DC current other
+  • module_current_2                    [A]   DC current other
+  • module_current_3                    [A]   DC current other
+  • module_current_4                    [A]   DC current other
+  • module_current_5                    [A]   DC current other
+  • module_current_6                    [A]   DC current other
+  • module_current_7                    [A]   DC current other
+  • module_current_8                    [A]   DC current other
+  • module_current_9                    [A]   DC current other
+  • module_current_10                   [A]   DC current other
+  • PhotoDiode_1                        [W/m^2]   Irradiance other
+  • PhotoDiode_2                        [W/m^2]   Irradiance other
+  • PhotoDiode_3                        [W/m^2]   Irradiance other
+  • PhotoDiode_4                        [W/m^2]   Irradiance other
+  • PhotoDiode_5                        [W/m^2]   Irradiance other
+  • PhotoDiode_6                        [W/m^2]   Irradiance other
+============================================================
+System ID : 4
+Name      : DC power
+Sensors   : 15
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • ac_current                          [A]   AC current
+  • power_factor                        [na]   AC other
+  • ac_voltage                          [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • inverter_temp                       [C]   Temperature inverter
+  • dc_pos_voltage                      [V]   DC voltage
+  • das_temp                            [C]   Temperature panel
+============================================================
+System ID : 4901
+Name      : Temperature ambient
+Sensors   : 100
+------------------------------------------------------------
+  • AmbTemp_C_Avg                       [C]   Temperature ambient
+  • Battery_A_Avg                       [A]   DC current battery
+  • Battery_V_Min                       [V]   DC voltage battery
+  • CR1000Temp_C_Avg                    [C]   Temperature enclosure
+  • ChgSource_Min                       [-]   Battery other
+  • ChgState_Min                        [-]   Battery other
+  • CkBatt_Max                          [-]   Battery other
+  • InvEtot_kWh_Max                     [kWh]   AC energy
+  • InvIa_Avg                           [A]   AC current other
+  • InvIb_Avg                           [A]   AC current other
+  • InvIc_Avg                           [A]   AC current other
+  • InvPAC_kW_Avg                       [kW]   AC power
+  • InvPDC_kW_Avg                       [kW]   DC power
+  • InvTempFault_Max                    [-]   Temperature inverter
+  • InvVDCin_Avg                        [V]   DC voltage other
+  • InvVPVin_Avg                        [V]   DC voltage other
+  • InvVa_Avg                           [V]   AC voltage other
+  • InvVb_Avg                           [V]   AC voltage other
+  • InvVc_Avg                           [V]   AC voltage other
+  • PwrMtrEdel_kVARh_Max                [kVARh]   AC power
+  • PwrMtrEdel_kWh_Max                  [kWh]   AC power
+  • PwrMtrErec_kVARh_Max                [kVARh]   AC power
+  • PwrMtrErec_kWh_Max                  [kWh]   AC power
+  • PwrMtrFreqMax_Max                   [Hz]   AC other
+  • PwrMtrFreqMin_Min                   [Hz]   AC other
+  • PwrMtrFreq_Avg                      [Hz]   AC other
+  • PwrMtrPF_Avg                        [-]   AC power other
+  • PwrMtrP_kVAR_Avg                    [kVAR]   AC power other
+  • PwrMtrP_kVA_Avg                     [kVA]   AC power other
+  • PwrMtrP_kW_Avg                      [kW]   AC power
+  • PwrMtrPhaseRev_Avg                  [-]   AC power other
+  • PwrMtrVaTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVa_Avg                        [V]   AC voltage other
+  • PwrMtrVbTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVb_Avg                        [V]   AC voltage other
+  • PwrMtrVcTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVc_Avg                        [V]   AC voltage other
+  • Pyra1_mV_Avg                        [mV]   Irradiance POA
+  • Pyra2_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra3_mV_Avg                        [mV]   Irradiance POA
+  • RTD_C_Avg_1                         [C]   Temperature backsheet
+  • RTD_C_Avg_10                        [C]   Temperature backsheet
+  • RTD_C_Avg_2                         [C]   Temperature backsheet
+  • RTD_C_Avg_3                         [C]   Temperature backsheet
+  • RTD_C_Avg_4                         [C]   Temperature backsheet
+  • RTD_C_Avg_5                         [C]   Temperature backsheet
+  • RTD_C_Avg_6                         [C]   Temperature backsheet
+  • RTD_C_Avg_7                         [C]   Temperature backsheet
+  • RTD_C_Avg_8                         [C]   Temperature backsheet
+  • RTD_C_Avg_9                         [C]   Temperature backsheet
+  • RefCell1_Wm2_Avg                    [W/m^2]   Irradiance POA
+  • RefCell2_Wm2_Avg                    [W/m^2]   Irradiance POA
+  • SEWSAmbientTemp_C_Avg               [C]   Temperature ambient
+  • SEWSModuleTemp_C_Avg                [C]   Temperature module
+  • ShuntCurrent_A_Avg_1                [A]   DC current other
+  • ShuntCurrent_A_Avg_2                [A]   DC current other
+  • ShuntCurrent_A_Avg_3                [A]   DC current other
+  • ShuntCurrent_A_Avg_4                [A]   DC current other
+  • ShuntCurrent_A_Avg_5                [A]   DC current other
+  • ShuntCurrent_A_Avg_6                [A]   DC current other
+  • ShuntCurrent_A_Avg_7                [A]   DC current other
+  • ShuntEtot_kWh_Max_1                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_2                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_3                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_4                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_5                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_6                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_7                 [kWh]   DC energy other
+  • ShuntPDC_kW_Avg_1                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_2                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_3                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_4                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_5                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_6                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_7                   [kW]   DC power other
+  • WindHeatStateID_Avg                 [-]   AC other
+  • WindRef_V_Min                       [V]   AC other
+  • WindSpeed_ms_Max                    [m/s]   AC other
+  • WindValid_Avg                       [-]   AC other
+  • DoorOpen_Min                        [-]   System other
+  • InvDriveFault_Max                   [-]   System other
+  • InvFreq_Avg                         [Hz]   System other
+  • InvGridFault_Max                    [-]   System other
+  • InvIDCin_Avg                        [A]   System other
+  • InvMainFault_Max                    [-]   System other
+  • InvOpStatus_Avg                     [-]   System other
+  • InvPVMStatus_Max                    [-]   System other
+  • InvSystemFault_Max                  [-]   System other
+  • InvSystemWarn_Max                   [-]   System other
+  • InvVDVoltage_V_Avg                  [V]   System other
+  • InvVoltageFault_Max                 [-]   System other
+  • Load_A_Avg                          [A]   System other
+  • PwrMtrIa_Avg                        [A]   System other
+  • PwrMtrIb_Avg                        [A]   System other
+  • PwrMtrIc_Avg                        [A]   System other
+  • Qloss_Ah_Max                        [Ah]   System other
+  • SEWSPOAIrrad_Wm2_Avg                [W/m^2]   System other
+  • WindDirAve_deg                      [Deg]   AC other
+  • WindDirStdDev_deg                   [Deg]   AC other
+  • WindSpeedAve_ms                     [m/s]   AC other
+============================================================
+System ID : 4902
+Name      : Temperature ambient
+Sensors   : 98
+------------------------------------------------------------
+  • AmbTemp_C_Avg                       [C]   Temperature ambient
+  • Battery_A_Avg                       [A]   DC current battery
+  • Battery_V_Min                       [V]   DC voltage battery
+  • CR1000Temp_C_Avg                    [C]   Temperature enclosure
+  • ChgSource_Min                       [-]   Battery other
+  • ChgState_Min                        [-]   Battery other
+  • CkBatt_Max                          [-]   Battery other
+  • InvEtot_kWh_Max                     [kWh]   AC energy
+  • InvIa_Avg                           [A]   AC current other
+  • InvIb_Avg                           [A]   AC current other
+  • InvIc_Avg                           [A]   AC current other
+  • InvPAC_kW_Avg                       [kW]   AC power
+  • InvPDC_kW_Avg                       [kW]   DC power
+  • InvTempFault_Max                    [-]   Temperature inverter
+  • InvVDCin_Avg                        [V]   DC voltage other
+  • InvVPVin_Avg                        [V]   DC voltage other
+  • InvVa_Avg                           [V]   AC voltage other
+  • InvVb_Avg                           [V]   AC voltage other
+  • InvVc_Avg                           [V]   AC voltage other
+  • PwrMtrEdel_kVARh_Max                [kVARh]   AC power
+  • PwrMtrEdel_kWh_Max                  [kWh]   AC power
+  • PwrMtrErec_kVARh_Max                [kVARh]   AC power
+  • PwrMtrErec_kWh_Max                  [kWh]   AC power
+  • PwrMtrFreqMax_Max                   [Hz]   AC other
+  • PwrMtrFreqMin_Min                   [Hz]   AC other
+  • PwrMtrFreq_Avg                      [Hz]   AC other
+  • PwrMtrPF_Avg                        [-]   AC power other
+  • PwrMtrP_kVAR_Avg                    [kVAR]   AC power other
+  • PwrMtrP_kVA_Avg                     [kVA]   AC power other
+  • PwrMtrP_kW_Avg                      [kW]   AC power
+  • PwrMtrPhaseRev_Avg                  [-]   AC power other
+  • PwrMtrVaTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVa_Avg                        [V]   AC voltage other
+  • PwrMtrVbTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVb_Avg                        [V]   AC voltage other
+  • PwrMtrVcTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVc_Avg                        [V]   AC voltage other
+  • Pyra1_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra2_mV_Avg                        [mV]   Irradiance POA
+  • RTD_C_Avg_1                         [C]   Temperature backsheet
+  • RTD_C_Avg_10                        [C]   Temperature backsheet
+  • RTD_C_Avg_2                         [C]   Temperature backsheet
+  • RTD_C_Avg_3                         [C]   Temperature backsheet
+  • RTD_C_Avg_4                         [C]   Temperature backsheet
+  • RTD_C_Avg_5                         [C]   Temperature backsheet
+  • RTD_C_Avg_6                         [C]   Temperature backsheet
+  • RTD_C_Avg_7                         [C]   Temperature backsheet
+  • RTD_C_Avg_8                         [C]   Temperature backsheet
+  • RTD_C_Avg_9                         [C]   Temperature backsheet
+  • RefCell1_Wm2_Avg                    [W/m^2]   Irradiance POA
+  • SEWSAmbientTemp_C_Avg               [C]   Temperature ambient
+  • SEWSModuleTemp_C_Avg                [C]   Temperature module
+  • ShuntCurrent_A_Avg_1                [A]   DC current other
+  • ShuntCurrent_A_Avg_2                [A]   DC current other
+  • ShuntCurrent_A_Avg_3                [A]   DC current other
+  • ShuntCurrent_A_Avg_4                [A]   DC current other
+  • ShuntCurrent_A_Avg_5                [A]   DC current other
+  • ShuntCurrent_A_Avg_6                [A]   DC current other
+  • ShuntCurrent_A_Avg_7                [A]   DC current other
+  • ShuntEtot_kWh_Max_1                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_2                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_3                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_4                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_5                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_6                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_7                 [kWh]   DC energy other
+  • ShuntPDC_kW_Avg_1                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_2                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_3                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_4                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_5                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_6                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_7                   [kW]   DC power other
+  • SEWSPOAIrrad_Wm2_Avg                [W/m^2]   Irradiance POA
+  • WindHeatStateID_Avg                 [-]   AC other
+  • WindRef_V_Min                       [V]   AC other
+  • WindSpeed_ms_Max                    [m/s]   AC other
+  • WindValid_Avg                       [-]   AC other
+  • DoorOpen_Min                        [-]   System other
+  • InvDriveFault_Max                   [-]   System other
+  • InvFreq_Avg                         [Hz]   System other
+  • InvGridFault_Max                    [-]   System other
+  • InvIDCin_Avg                        [A]   System other
+  • InvMainFault_Max                    [-]   System other
+  • InvOpStatus_Avg                     [-]   System other
+  • InvPVMStatus_Max                    [-]   System other
+  • InvSystemFault_Max                  [-]   System other
+  • InvSystemWarn_Max                   [-]   System other
+  • InvVDVoltage_V_Avg                  [V]   System other
+  • InvVoltageFault_Max                 [-]   System other
+  • Load_A_Avg                          [A]   System other
+  • PwrMtrIa_Avg                        [A]   System other
+  • PwrMtrIb_Avg                        [A]   System other
+  • PwrMtrIc_Avg                        [A]   System other
+  • Qloss_Ah_Max                        [Ah]   System other
+  • WindDirAve_deg                      [Deg]   AC other
+  • WindDirStdDev_deg                   [Deg]   AC other
+  • WindSpeedAve_ms                     [m/s]   AC other
+============================================================
+System ID : 4903
+Name      : Temperature ambient
+Sensors   : 121
+------------------------------------------------------------
+  • AmbTemp_C_Avg                       [C]   Temperature ambient
+  • Battery_A_Avg                       [A]   DC current battery
+  • Battery_V_Min                       [V]   DC voltage battery
+  • CR1000Temp_C_Avg                    [C]   Temperature enclosure
+  • ChgSource_Min                       [-]   Battery other
+  • ChgState_Min                        [-]   Battery other
+  • CkBatt_Max                          [-]   Battery other
+  • InvEtoday_kWh_Max                   [kWh]   AC energy
+  • InvEtot_kWh_Max                     [kWh]   AC energy
+  • InvEyesterday_kWh_Max               [kWh]   AC energy
+  • InvINeutral_Avg                     [A]   AC current other
+  • InvIUnbal_Avg                       [%]   AC current other
+  • InvIa_Avg                           [A]   AC current other
+  • InvIabcAvg_Avg                      [A]   AC current other
+  • InvIb_Avg                           [A]   AC current other
+  • InvIc_Avg                           [A]   AC current other
+  • InvPAC_kW_Avg                       [kW]   AC power
+  • InvPDC_kW_Avg                       [kW]   DC power
+  • InvPF_Avg                           [-]   AC other
+  • InvTempHeatsink_C_Avg               [C]   Temperature inverter
+  • InvTempInternalAir_C_Avg            [C]   Temperature inverter
+  • InvTempInverterAir_C_Avg            [C]   Temperature inverter
+  • InvVAR_kVAR_Avg                     [kVAR]   AC power other
+  • InvVA_kVA_Avg                       [kVA]   AC power other
+  • InvVDCin_Avg                        [V]   DC voltage other
+  • InvVUnbal_Avg                       [%]   AC voltage other
+  • InvVa_Avg                           [V]   AC voltage other
+  • InvVabcAvg_Avg                      [V]   AC voltage other
+  • InvVb_Avg                           [V]   AC voltage other
+  • InvVc_Avg                           [V]   AC voltage other
+  • PwrMtrEdel_kVARh_Max                [kVARh]   AC power
+  • PwrMtrEdel_kWh_Max                  [kWh]   AC power
+  • PwrMtrErec_kVARh_Max                [kVARh]   AC power
+  • PwrMtrErec_kWh_Max                  [kWh]   AC power
+  • PwrMtrFreqMax_Max                   [Hz]   AC other
+  • PwrMtrFreqMin_Min                   [Hz]   AC other
+  • PwrMtrFreq_Avg                      [Hz]   AC other
+  • PwrMtrPF_Avg                        [-]   AC power other
+  • PwrMtrP_kVAR_Avg                    [kVAR]   AC power other
+  • PwrMtrP_kVA_Avg                     [kVA]   AC power other
+  • PwrMtrP_kW_Avg                      [kW]   AC power
+  • PwrMtrPhaseRev_Avg                  [-]   AC power other
+  • PwrMtrVaTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVa_Avg                        [V]   AC voltage other
+  • PwrMtrVbTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVb_Avg                        [V]   AC voltage other
+  • PwrMtrVcTHDMax_Max                  [%]   AC voltage other
+  • PwrMtrVc_Avg                        [V]   AC voltage other
+  • Pyra1_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra2_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra3_mV_Avg                        [mV]   Irradiance POA
+  • Pyra4_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra5_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra6_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra7_mV_Avg                        [mV]   Irradiance GHI
+  • Pyra8_mV_Avg                        [mV]   Irradiance GHI
+  • RTD_C_Avg_1                         [C]   Temperature backsheet
+  • RTD_C_Avg_2                         [C]   Temperature backsheet
+  • RTD_C_Avg_3                         [C]   Temperature backsheet
+  • RTD_C_Avg_4                         [C]   Temperature backsheet
+  • RTD_C_Avg_5                         [C]   Temperature backsheet
+  • RTD_C_Avg_6                         [C]   Temperature backsheet
+  • RTD_C_Avg_7                         [C]   Temperature backsheet
+  • RefCell1_Wm2_Avg                    [W/m^2]   Irradiance POA
+  • RefCell2_Wm2_Avg                    [W/m^2]   Irradiance GHI
+  • RefCell3_Wm2_Avg                    [W/m^2]   Irradiance GHI
+  • SEWSAmbientTemp_C_Avg               [C]   Temperature ambient
+  • SEWSModuleTemp_C_Avg                [C]   Temperature module
+  • ShuntCurrent_A_Avg_1                [A]   DC current other
+  • ShuntCurrent_A_Avg_2                [A]   DC current other
+  • ShuntCurrent_A_Avg_3                [A]   DC current other
+  • ShuntCurrent_A_Avg_4                [A]   DC current other
+  • ShuntEtot_kWh_Max_1                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_2                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_3                 [kWh]   DC energy other
+  • ShuntEtot_kWh_Max_4                 [kWh]   DC energy other
+  • ShuntPDC_kW_Avg_1                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_2                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_3                   [kW]   DC power other
+  • ShuntPDC_kW_Avg_4                   [kW]   DC power other
+  • TCTemps_C_Avg_1                     [C]   Temperature other
+  • TCTemps_C_Avg_10                    [C]   Temperature other
+  • TCTemps_C_Avg_11                    [C]   Temperature other
+  • TCTemps_C_Avg_12                    [C]   Temperature other
+  • TCTemps_C_Avg_2                     [C]   Temperature other
+  • TCTemps_C_Avg_3                     [C]   Temperature other
+  • TCTemps_C_Avg_4                     [C]   Temperature other
+  • TCTemps_C_Avg_5                     [C]   Temperature other
+  • TCTemps_C_Avg_6                     [C]   Temperature other
+  • TCTemps_C_Avg_7                     [C]   Temperature other
+  • TCTemps_C_Avg_8                     [C]   Temperature other
+  • TCTemps_C_Avg_9                     [C]   Temperature other
+  • TemperatureFaults_Max               [-]   Temperature other
+  • WindHeatStateID_Avg                 [-]   AC other
+  • WindRef_V_Min                       [V]   AC other
+  • WindSpeed_ms_Max                    [m/s]   AC other
+  • WindValid_Avg                       [-]   AC other
+  • DPCBFaults_Max                      [-]   System other
+  • DoorOpen_Min                        [-]   System other
+  • GeneralFaults1_Max                  [-]   System other
+  • GeneralFaults2_Max                  [-]   System other
+  • HardwareFaults_Max                  [-]   System other
+  • InvFreq_Avg                         [Hz]   System other
+  • InvGndImped_kOhm_Avg                [kOhm]   System other
+  • InvIDCin_Avg                        [A]   System other
+  • InvIGnd_Avg                         [A]   System other
+  • InvOpState_Avg                      [-]   System other
+  • InvVDVoltage_V_Avg                  [V]   System other
+  • InvVPVIn_Avg                        [V]   System other
+  • InverterFaults_Max                  [-]   System other
+  • Load_A_Avg                          [A]   System other
+  • NumActiveFaults_Max                 [-]   System other
+  • PwrMtrIa_Avg                        [A]   System other
+  • PwrMtrIb_Avg                        [A]   System other
+  • PwrMtrIc_Avg                        [A]   System other
+  • Qloss_Ah_Max                        [Ah]   System other
+  • SEWSPOAIrrad_Wm2_Avg                [W/m^2]   System other
+  • Warnings_Max                        [-]   System other
+  • WindDirAve_deg                      [Deg]   AC other
+  • WindDirStdDev_deg                   [Deg]   AC other
+  • WindSpeedAve_ms                     [m/s]   AC other
+============================================================
+System ID : 50
+Name      : DC power
+Sensors   : 21
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power_1                          [W]   DC power
+  • dc_power_2                          [W]   DC power
+  • ac_power_1                          [W]   AC power
+  • ac_power_2                          [W]   AC power
+  • ac_current                          [A]   AC current
+  • ac_volts                            [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • dc_neg_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • inverter_temp_2                     [C]   Temperature inverter
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • dc_pos_voltage                      [V]   DC voltage
+  • dc_neg_voltage                      [V]   DC voltage
+  • das_temperature                     [C]   Temperature panel
+  • inveter_temp                        [C]   Temperature inverter
+============================================================
+System ID : 51
+Name      : DC power
+Sensors   : 21
+------------------------------------------------------------
+  • dc_power                            [W]   DC power
+  • ac_power                            [W]   AC power
+  • dc_power_1                          [W]   DC power
+  • dc_power_2                          [W]   DC power
+  • ac_power_1                          [W]   AC power
+  • ac_power_2                          [W]   AC power
+  • ac_current                          [A]   AC current
+  • ac_volts                            [V]   AC voltage
+  • dc_pos_current                      [A]   DC current
+  • dc_neg_current                      [A]   DC current
+  • das_battery_voltage                 [V]   DC voltage battery
+  • poa_irradiance                      [W/m^2]   Irradiance POA
+  • inverter_temp_2                     [C]   Temperature inverter
+  • ambient_temp                        [C]   Temperature ambient
+  • module_temp_1                       [C]   Temperature module
+  • module_temp_2                       [C]   Temperature module
+  • module_temp_3                       [C]   Temperature module
+  • dc_pos_voltage                      [V]   DC voltage
+  • dc_neg_voltage                      [V]   DC voltage
+  • das_temperature                     [C]   Temperature panel
+  • inveter_temp                        [C]   Temperature inverter
+
+============================================================
+✅ Summary saved: metrics_summary.csv
+
+Sensor coverage across all 160 systems:
+------------------------------------------------------------
+  A_avg                               ███████████████████████████████████████████████████████████████████████ (71/160)
+  dc_power                            █████████████████████████████████████ (37/160)
+  Wh_n_sum                            ████████████████████████████████████ (36/160)
+  W_n_avg                             ████████████████████████████████████ (36/160)
+  PPV_avg                             ███████████████████████████████████ (35/160)
+  W_avg                               ███████████████████████████████████ (35/160)
+  Wh_sum                              ███████████████████████████████████ (35/160)
+  ac_power                            ██████████████████████████████████ (34/160)
+  poa_irradiance                      ████████████████████████████████ (32/160)
+  wind_speed_mph                      █████████████████████████████ (29/160)
+  ambient_temp_F                      ████████████████████████████ (28/160)
+  module_temp_F                       ███████████████████████████ (27/160)
+  ac_current                          ███████████████████ (19/160)
+  IntSolIrrad                         ███████████████████ (19/160)
+  ambient_temp                        ██████████████████ (18/160)
+  VATotal                             ██████████████████ (18/160)
+  RTW                                 ██████████████████ (18/160)
+  WHTotal                             ██████████████████ (18/160)
+  ac_voltage                          ████████████████ (16/160)
+  error                               ███████████████ (15/160)
+  module_temp_1                       ██████████████ (14/160)
+  module_temp_2                       █████████████ (13/160)
+  module_temp_3                       █████████████ (13/160)
+  inv1_dc_voltage                     █████████████ (13/160)
+  inv2_dc_voltage                     █████████████ (13/160)
+  inv2_ac_power                       ███████████ (11/160)
+  das_battery_voltage                 ██████████ (10/160)
+  inverter_temp                       ██████████ (10/160)
+  inv1_ac_power                       ██████████ (10/160)
+  ac_frequency                        ██████████ (10/160)
+  power_factor                        ██████████ (10/160)
+  dc_voltage                          ██████████ (10/160)
+  dc_pos_current                      █████████ (9/160)
+  dc_pos_voltage                      █████████ (9/160)
+  das_temp                            █████████ (9/160)
+  inv1_dc_power                       █████████ (9/160)
+  inv2_dc_power                       █████████ (9/160)
+  inv1_dc_current                     █████████ (9/160)
+  inv2_dc_current                     █████████ (9/160)
+  relative_humidity                   █████████ (9/160)
+  ac_power_1                          █████████ (9/160)
+  ac_power_2                          █████████ (9/160)
+  inv1_temp                           ████████ (8/160)
+  inv1_ac_current                     ████████ (8/160)
+  inv2_ac_current                     ████████ (8/160)
+  inv1_ac_voltage                     ████████ (8/160)
+  inv3_ac_power                       ███████ (7/160)
+  inv3_dc_power                       ███████ (7/160)
+  inv3_dc_current                     ███████ (7/160)
+  inv2_temp                           ███████ (7/160)
+  inv3_dc_voltage                     ███████ (7/160)
+  dc_current                          ███████ (7/160)
+  inv2_ac_voltage                     ███████ (7/160)
+  module_temp                         ███████ (7/160)
+  ac_power_3                          ███████ (7/160)
+  dc_voltage_1                        ███████ (7/160)
+  dc_voltage_2                        ███████ (7/160)
+  dc_voltage_3                        ███████ (7/160)
+  inv4_ac_power                       ██████ (6/160)
+  inv4_dc_power                       ██████ (6/160)
+  inv5_ac_power                       ██████ (6/160)
+  inv5_dc_power                       ██████ (6/160)
+  inv6_ac_power                       ██████ (6/160)
+  inv6_dc_power                       ██████ (6/160)
+  inv4_dc_current                     ██████ (6/160)
+  inv5_dc_current                     ██████ (6/160)
+  inv6_dc_current                     ██████ (6/160)
+  inv4_dc_voltage                     ██████ (6/160)
+  inv5_dc_voltage                     ██████ (6/160)
+  inv6_dc_voltage                     ██████ (6/160)
+  ac_power_metered_kW                 ██████ (6/160)
+  module_temp_4                       ██████ (6/160)
+  wind_direction                      ██████ (6/160)
+  dc_current_1                        ██████ (6/160)
+  dc_power_1_calc                     ██████ (6/160)
+  dc_current_2                        ██████ (6/160)
+  dc_power_2_calc                     ██████ (6/160)
+  dc_current_3                        ██████ (6/160)
+  dc_power_3_calc                     ██████ (6/160)
+  ac_voltage_1                        ██████ (6/160)
+  ac_voltage_2                        ██████ (6/160)
+  ac_voltage_3                        ██████ (6/160)
+  dc_power_hW                         █████ (5/160)
+  ac_power_hW                         █████ (5/160)
+  inverter_error_code                 █████ (5/160)
+  wind_speed                          █████ (5/160)
+  module_temp_5                       █████ (5/160)
+  module_temp_6                       █████ (5/160)
+  module_temp_7                       █████ (5/160)
+  module_temp_8                       █████ (5/160)
+  ac_current_1                        ████ (4/160)
+  ac_current_2                        ████ (4/160)
+  ac_current_3                        ████ (4/160)
+  inv1_dc_current1                    ████ (4/160)
+  inv1_dc_current2                    ████ (4/160)
+  inv2_dc_current1                    ████ (4/160)
+  inv2_dc_current2                    ████ (4/160)
+  poa_irradiance_refcell1             ████ (4/160)
+  poa_irradiance_refcell2             ████ (4/160)
+  PR                                  ████ (4/160)
+  kWh_net                             ████ (4/160)
+  inv7_ac_power                       ███ (3/160)
+  inv7_dc_power                       ███ (3/160)
+  inv7_dc_current                     ███ (3/160)
+  inv3_temp                           ███ (3/160)
+  inv5_temp                           ███ (3/160)
+  inv6_temp                           ███ (3/160)
+  inv7_dc_voltage                     ███ (3/160)
+  module_temp_K                       ███ (3/160)
+  ambient_temp_K                      ███ (3/160)
+  ac_meter_1_power_kW                 ███ (3/160)
+  ac_meter_2_power_kW                 ███ (3/160)
+  gh_irradiance                       ███ (3/160)
+  inv1_ac_power_kW                    ███ (3/160)
+  poa_irradiance_2                    ███ (3/160)
+  poa_irradiance_Sun                  ███ (3/160)
+  kWh_gross                           ███ (3/160)
+  AmbTemp_C_Avg                       ███ (3/160)
+  Battery_A_Avg                       ███ (3/160)
+  Battery_V_Min                       ███ (3/160)
+  CR1000Temp_C_Avg                    ███ (3/160)
+  ChgSource_Min                       ███ (3/160)
+  ChgState_Min                        ███ (3/160)
+  CkBatt_Max                          ███ (3/160)
+  InvEtot_kWh_Max                     ███ (3/160)
+  InvIa_Avg                           ███ (3/160)
+  InvIb_Avg                           ███ (3/160)
+  InvIc_Avg                           ███ (3/160)
+  InvPAC_kW_Avg                       ███ (3/160)
+  InvPDC_kW_Avg                       ███ (3/160)
+  InvVDCin_Avg                        ███ (3/160)
+  InvVa_Avg                           ███ (3/160)
+  InvVb_Avg                           ███ (3/160)
+  InvVc_Avg                           ███ (3/160)
+  PwrMtrEdel_kVARh_Max                ███ (3/160)
+  PwrMtrEdel_kWh_Max                  ███ (3/160)
+  PwrMtrErec_kVARh_Max                ███ (3/160)
+  PwrMtrErec_kWh_Max                  ███ (3/160)
+  PwrMtrFreqMax_Max                   ███ (3/160)
+  PwrMtrFreqMin_Min                   ███ (3/160)
+  PwrMtrFreq_Avg                      ███ (3/160)
+  PwrMtrPF_Avg                        ███ (3/160)
+  PwrMtrP_kVAR_Avg                    ███ (3/160)
+  PwrMtrP_kVA_Avg                     ███ (3/160)
+  PwrMtrP_kW_Avg                      ███ (3/160)
+  PwrMtrPhaseRev_Avg                  ███ (3/160)
+  PwrMtrVaTHDMax_Max                  ███ (3/160)
+  PwrMtrVa_Avg                        ███ (3/160)
+  PwrMtrVbTHDMax_Max                  ███ (3/160)
+  PwrMtrVb_Avg                        ███ (3/160)
+  PwrMtrVcTHDMax_Max                  ███ (3/160)
+  PwrMtrVc_Avg                        ███ (3/160)
+  Pyra1_mV_Avg                        ███ (3/160)
+  Pyra2_mV_Avg                        ███ (3/160)
+  RTD_C_Avg_1                         ███ (3/160)
+  RTD_C_Avg_2                         ███ (3/160)
+  RTD_C_Avg_3                         ███ (3/160)
+  RTD_C_Avg_4                         ███ (3/160)
+  RTD_C_Avg_5                         ███ (3/160)
+  RTD_C_Avg_6                         ███ (3/160)
+  RTD_C_Avg_7                         ███ (3/160)
+  RefCell1_Wm2_Avg                    ███ (3/160)
+  SEWSAmbientTemp_C_Avg               ███ (3/160)
+  SEWSModuleTemp_C_Avg                ███ (3/160)
+  ShuntCurrent_A_Avg_1                ███ (3/160)
+  ShuntCurrent_A_Avg_2                ███ (3/160)
+  ShuntCurrent_A_Avg_3                ███ (3/160)
+  ShuntCurrent_A_Avg_4                ███ (3/160)
+  ShuntEtot_kWh_Max_1                 ███ (3/160)
+  ShuntEtot_kWh_Max_2                 ███ (3/160)
+  ShuntEtot_kWh_Max_3                 ███ (3/160)
+  ShuntEtot_kWh_Max_4                 ███ (3/160)
+  ShuntPDC_kW_Avg_1                   ███ (3/160)
+  ShuntPDC_kW_Avg_2                   ███ (3/160)
+  ShuntPDC_kW_Avg_3                   ███ (3/160)
+  ShuntPDC_kW_Avg_4                   ███ (3/160)
+  WindHeatStateID_Avg                 ███ (3/160)
+  WindRef_V_Min                       ███ (3/160)
+  WindSpeed_ms_Max                    ███ (3/160)
+  WindValid_Avg                       ███ (3/160)
+  DoorOpen_Min                        ███ (3/160)
+  InvFreq_Avg                         ███ (3/160)
+  InvIDCin_Avg                        ███ (3/160)
+  InvVDVoltage_V_Avg                  ███ (3/160)
+  Load_A_Avg                          ███ (3/160)
+  PwrMtrIa_Avg                        ███ (3/160)
+  PwrMtrIb_Avg                        ███ (3/160)
+  PwrMtrIc_Avg                        ███ (3/160)
+  Qloss_Ah_Max                        ███ (3/160)
+  SEWSPOAIrrad_Wm2_Avg                ███ (3/160)
+  WindDirAve_deg                      ███ (3/160)
+  WindDirStdDev_deg                   ███ (3/160)
+  WindSpeedAve_ms                     ███ (3/160)
+  inv4_temp                           ██ (2/160)
+  inv1_ac_power_hW                    ██ (2/160)
+  inv1_dc_power_hW                    ██ (2/160)
+  inv2_ac_power_hW                    ██ (2/160)
+  inv2_dc_power_hW                    ██ (2/160)
+  inv1_power_factor                   ██ (2/160)
+  inv2_power_factor                   ██ (2/160)
+  inv1_error_code                     ██ (2/160)
+  inv2_error_code                     ██ (2/160)
+  inv8_ac_power                       ██ (2/160)
+  inv8_dc_power                       ██ (2/160)
+  inv9_ac_power                       ██ (2/160)
+  inv9_dc_power                       ██ (2/160)
+  inv8_dc_current                     ██ (2/160)
+  inv9_dc_current                     ██ (2/160)
+  inv8_dc_voltage                     ██ (2/160)
+  inv9_dc_voltage                     ██ (2/160)
+  inv2_ac_power_kW                    ██ (2/160)
+  ac_power_kW                         ██ (2/160)
+  energy                              ██ (2/160)
+  input_voltage                       ██ (2/160)
+  input_current                       ██ (2/160)
+  das_temp_2                          ██ (2/160)
+  dc_current_4                        ██ (2/160)
+  ac_power_4                          ██ (2/160)
+  dc_current_5                        ██ (2/160)
+  ac_power_5                          ██ (2/160)
+  dc_current_6                        ██ (2/160)
+  ac_power_6                          ██ (2/160)
+  dc_power_4_calc                     ██ (2/160)
+  dc_power_5_calc                     ██ (2/160)
+  dc_power_6_calc                     ██ (2/160)
+  ac_power_1_6                        ██ (2/160)
+  dc_power_1_6                        ██ (2/160)
+  ac_voltage_4                        ██ (2/160)
+  ac_voltage_5                        ██ (2/160)
+  ac_voltage_6                        ██ (2/160)
+  dc_voltage_4                        ██ (2/160)
+  dc_voltage_5                        ██ (2/160)
+  dc_voltage_6                        ██ (2/160)
+  inv3_ac_current                     ██ (2/160)
+  inv4_ac_current                     ██ (2/160)
+  inv5_ac_current                     ██ (2/160)
+  inv6_ac_current                     ██ (2/160)
+  ac_power_1_KwAC                     ██ (2/160)
+  ac_power_2_KwAC                     ██ (2/160)
+  ambient_temp_F_TempF                ██ (2/160)
+  ac_kwhr_1_KwhAC                     ██ (2/160)
+  ac_kwhr_2_KwhAC                     ██ (2/160)
+  wind_speed_mph_WindSpeed            ██ (2/160)
+  wind_direction_WindDirection        ██ (2/160)
+  power_factor_1000                   ██ (2/160)
+  InvTempFault_Max                    ██ (2/160)
+  InvVPVin_Avg                        ██ (2/160)
+  Pyra3_mV_Avg                        ██ (2/160)
+  RTD_C_Avg_10                        ██ (2/160)
+  RTD_C_Avg_8                         ██ (2/160)
+  RTD_C_Avg_9                         ██ (2/160)
+  RefCell2_Wm2_Avg                    ██ (2/160)
+  ShuntCurrent_A_Avg_5                ██ (2/160)
+  ShuntCurrent_A_Avg_6                ██ (2/160)
+  ShuntCurrent_A_Avg_7                ██ (2/160)
+  ShuntEtot_kWh_Max_5                 ██ (2/160)
+  ShuntEtot_kWh_Max_6                 ██ (2/160)
+  ShuntEtot_kWh_Max_7                 ██ (2/160)
+  ShuntPDC_kW_Avg_5                   ██ (2/160)
+  ShuntPDC_kW_Avg_6                   ██ (2/160)
+  ShuntPDC_kW_Avg_7                   ██ (2/160)
+  InvDriveFault_Max                   ██ (2/160)
+  InvGridFault_Max                    ██ (2/160)
+  InvMainFault_Max                    ██ (2/160)
+  InvOpStatus_Avg                     ██ (2/160)
+  InvPVMStatus_Max                    ██ (2/160)
+  InvSystemFault_Max                  ██ (2/160)
+  InvSystemWarn_Max                   ██ (2/160)
+  InvVoltageFault_Max                 ██ (2/160)
+  dc_power_1                          ██ (2/160)
+  dc_power_2                          ██ (2/160)
+  ac_volts                            ██ (2/160)
+  dc_neg_current                      ██ (2/160)
+  inverter_temp_2                     ██ (2/160)
+  dc_neg_voltage                      ██ (2/160)
+  das_temperature                     ██ (2/160)
+  inveter_temp                        ██ (2/160)
+  inv4_dc_temp                        █ (1/160)
+  inv7_temp                           █ (1/160)
+  ac_inverter_power                   █ (1/160)
+  dc_power_A1                         █ (1/160)
+  dc_power_A2                         █ (1/160)
+  dc_power_B1                         █ (1/160)
+  dc_power_B2                         █ (1/160)
+  dc_power_C1                         █ (1/160)
+  dc_power_C2                         █ (1/160)
+  poa_irradiance_cs300_1              █ (1/160)
+  poa_irradiance_cs300_2              █ (1/160)
+  poa_irradiance_lp02_2               █ (1/160)
+  direct_normal_dr01                  █ (1/160)
+  dc_voltage_A                        █ (1/160)
+  dc_voltage_B                        █ (1/160)
+  dc_voltage_C                        █ (1/160)
+  ac_power_metered_1_2                █ (1/160)
+  module_temp_9                       █ (1/160)
+  module_temp_10                      █ (1/160)
+  module_temp_11                      █ (1/160)
+  module_temp_12                      █ (1/160)
+  module_temp_13                      █ (1/160)
+  poa_irradiance_south_array          █ (1/160)
+  poa_irradiance_west_array           █ (1/160)
+  module_temp_south_F                 █ (1/160)
+  module_temp_west_F                  █ (1/160)
+  ambient_temp_1_F                    █ (1/160)
+  ambient_temp_2_F                    █ (1/160)
+  total_energy_kWh                    █ (1/160)
+  inv1_input_voltage                  █ (1/160)
+  inv2_input_voltage                  █ (1/160)
+  inv1_input_current                  █ (1/160)
+  inv2_input_current                  █ (1/160)
+  POA_irradiance                      █ (1/160)
+  POA_irradiance_refcell              █ (1/160)
+  refcell_temp                        █ (1/160)
+  reference_cell_temperature          █ (1/160)
+  dc_power_calc                       █ (1/160)
+  meter3_ac_power                     █ (1/160)
+  meter2_ac_power                     █ (1/160)
+  meter1_ac_power                     █ (1/160)
+  metered_ac_power                    █ (1/160)
+  inv_total_ac_power                  █ (1/160)
+  String1Current_unshaded             █ (1/160)
+  String2Current_unshaded             █ (1/160)
+  String11Current_shaded              █ (1/160)
+  String12Current_shaded              █ (1/160)
+  ac_frequency_1                      █ (1/160)
+  ac_frequency_2                      █ (1/160)
+  ac_frequency_3                      █ (1/160)
+  inv3_ac_voltage                     █ (1/160)
+  inv4_ac_voltage                     █ (1/160)
+  inv5_ac_voltage                     █ (1/160)
+  inv6_ac_voltage                     █ (1/160)
+  inv7_ac_current                     █ (1/160)
+  inv8_ac_current                     █ (1/160)
+  inv9_ac_current                     █ (1/160)
+  inv2-9_ac_voltage                   █ (1/160)
+  ac_current_phA                      █ (1/160)
+  ac_current_phB                      █ (1/160)
+  ac_current_phC                      █ (1/160)
+  power_factor_phA                    █ (1/160)
+  power_factor_phB                    █ (1/160)
+  power_factor_phC                    █ (1/160)
+  apparent_power_kVA                  █ (1/160)
+  reactive_power_kVAR                 █ (1/160)
+  ac_voltage_LtoL                     █ (1/160)
+  ac_voltage_LtoN                     █ (1/160)
+  ac_voltage_AB                       █ (1/160)
+  ac_voltage_BC                       █ (1/160)
+  ac_voltage_AC                       █ (1/160)
+  ac_voltage_AN                       █ (1/160)
+  ac_voltage_BN                       █ (1/160)
+  ac_voltage_CN                       █ (1/160)
+  dc_current_positive                 █ (1/160)
+  dc_current_negative                 █ (1/160)
+  dc_power_negative                   █ (1/160)
+  dc_power_positive                   █ (1/160)
+  dc_voltage_positive                 █ (1/160)
+  dc_voltage_negative                 █ (1/160)
+  enclosure_temp                      █ (1/160)
+  real_power_kW                       █ (1/160)
+  real_power_phA_kW                   █ (1/160)
+  real_power_phB_kW                   █ (1/160)
+  real_power_phC_kW                   █ (1/160)
+  ac_power_3_KwAC                     █ (1/160)
+  module_temp_F_Temp2                 █ (1/160)
+  ac_kwhr_3_KwhAC                     █ (1/160)
+  dc_current_1_Idc                    █ (1/160)
+  dc_current_2_Idc                    █ (1/160)
+  dc_voltage_1_Vdc                    █ (1/160)
+  dc_voltage_2_Vdc                    █ (1/160)
+  ac_power_KwAC                       █ (1/160)
+  dc_current_I2                       █ (1/160)
+  ac_current_Iac                      █ (1/160)
+  ac_voltage_Vac                      █ (1/160)
+  module_temp_F_Temp1                 █ (1/160)
+  dc_voltage_Vdc                      █ (1/160)
+  ac_kwhr_KwhAC                       █ (1/160)
+  irradiance_global_1                 █ (1/160)
+  irradiance_albedo_2                 █ (1/160)
+  irradiance_global_3                 █ (1/160)
+  irradiance_albedo_3                 █ (1/160)
+  irradiance_albedo_1                 █ (1/160)
+  irradiance_global_2                 █ (1/160)
+  battery_voltage                     █ (1/160)
+  ptemp                               █ (1/160)
+  poa_irradiance_1                    █ (1/160)
+  module8_temp_Top                    █ (1/160)
+  module8_temp_Mid                    █ (1/160)
+  module8_temp_Bot                    █ (1/160)
+  inv_temp                            █ (1/160)
+  Module3_Temp                        █ (1/160)
+  Module10NW_Temp                     █ (1/160)
+  Module6NE_Temp                      █ (1/160)
+  Module1SW_Temp                      █ (1/160)
+  Module5SE_Temp                      █ (1/160)
+  reflector_temp_1                    █ (1/160)
+  module_current_1                    █ (1/160)
+  module_current_2                    █ (1/160)
+  module_current_3                    █ (1/160)
+  module_current_4                    █ (1/160)
+  module_current_5                    █ (1/160)
+  module_current_6                    █ (1/160)
+  module_current_7                    █ (1/160)
+  module_current_8                    █ (1/160)
+  module_current_9                    █ (1/160)
+  module_current_10                   █ (1/160)
+  PhotoDiode_1                        █ (1/160)
+  PhotoDiode_2                        █ (1/160)
+  PhotoDiode_3                        █ (1/160)
+  PhotoDiode_4                        █ (1/160)
+  PhotoDiode_5                        █ (1/160)
+  PhotoDiode_6                        █ (1/160)
+  InvEtoday_kWh_Max                   █ (1/160)
+  InvEyesterday_kWh_Max               █ (1/160)
+  InvINeutral_Avg                     █ (1/160)
+  InvIUnbal_Avg                       █ (1/160)
+  InvIabcAvg_Avg                      █ (1/160)
+  InvPF_Avg                           █ (1/160)
+  InvTempHeatsink_C_Avg               █ (1/160)
+  InvTempInternalAir_C_Avg            █ (1/160)
+  InvTempInverterAir_C_Avg            █ (1/160)
+  InvVAR_kVAR_Avg                     █ (1/160)
+  InvVA_kVA_Avg                       █ (1/160)
+  InvVUnbal_Avg                       █ (1/160)
+  InvVabcAvg_Avg                      █ (1/160)
+  Pyra4_mV_Avg                        █ (1/160)
+  Pyra5_mV_Avg                        █ (1/160)
+  Pyra6_mV_Avg                        █ (1/160)
+  Pyra7_mV_Avg                        █ (1/160)
+  Pyra8_mV_Avg                        █ (1/160)
+  RefCell3_Wm2_Avg                    █ (1/160)
+  TCTemps_C_Avg_1                     █ (1/160)
+  TCTemps_C_Avg_10                    █ (1/160)
+  TCTemps_C_Avg_11                    █ (1/160)
+  TCTemps_C_Avg_12                    █ (1/160)
+  TCTemps_C_Avg_2                     █ (1/160)
+  TCTemps_C_Avg_3                     █ (1/160)
+  TCTemps_C_Avg_4                     █ (1/160)
+  TCTemps_C_Avg_5                     █ (1/160)
+  TCTemps_C_Avg_6                     █ (1/160)
+  TCTemps_C_Avg_7                     █ (1/160)
+  TCTemps_C_Avg_8                     █ (1/160)
+  TCTemps_C_Avg_9                     █ (1/160)
+  TemperatureFaults_Max               █ (1/160)
+  DPCBFaults_Max                      █ (1/160)
+  GeneralFaults1_Max                  █ (1/160)
+  GeneralFaults2_Max                  █ (1/160)
+  HardwareFaults_Max                  █ (1/160)
+  InvGndImped_kOhm_Avg                █ (1/160)
+  InvIGnd_Avg                         █ (1/160)
+  InvOpState_Avg                      █ (1/160)
+  InvVPVIn_Avg                        █ (1/160)
+  InverterFaults_Max                  █ (1/160)
+  NumActiveFaults_Max                 █ (1/160)
+  Warnings_Max                        █ (1/160)

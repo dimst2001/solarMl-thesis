@@ -1,2 +1,0 @@
-inv3_dc_power
-module_temp_C

@@ -1,9 +1,0 @@
-ac_power_W
-poa_irradiance
-power_factor
-module_temp_C
-ac_voltage
-ambient_temp_C
-inverter_temp
-input_voltage
-relative_humidity

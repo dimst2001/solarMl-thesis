@@ -1,3 +1,0 @@
-ac_current
-inveter_temp
-module_temp_3

@@ -1,7 +1,0 @@
-ac_power
-module_temp_1
-ac_current
-ac_voltage
-das_temp
-dc_pos_voltage
-ambient_temp

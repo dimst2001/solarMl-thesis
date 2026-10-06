@@ -1,2 +1,0 @@
-ac_power_W
-module_temp_C

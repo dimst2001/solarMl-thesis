@@ -1,7 +1,0 @@
-ac_power_W
-module_temp_C
-power_factor
-ambient_temp_C
-inverter_temp
-relative_humidity
-dc_voltage

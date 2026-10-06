@@ -1,9 +1,0 @@
-inv3_dc_power
-inv4_temp
-module_temp_C
-wind_speed_mph
-ambient_temp_C
-inv5_dc_voltage
-inv1_dc_voltage
-inv2_dc_voltage
-inv4_dc_voltage

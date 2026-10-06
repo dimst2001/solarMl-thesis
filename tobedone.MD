@@ -1,6 +1,38 @@
  
  What's Next — In Order
+Notebook 1 - Data Preprocessing -Feature selection scaling normalization
 
+
+ 
+
+
+
+Basic statistics and distributions
+
+Pearson correlation with dc_power
+
+Correlation heatmap
+
+Scatter plots per feature
+
+Select final features 
+
+
+Save selected_features.txt
+
+
+multi random state cross validation
+
+
+Load selected features only
+
+Handle remaining NaN (fill or drop)
+
+Normalize/scale features (MinMaxScaler)
+
+Train/test split (80/20)
+
+Save ready-to-train arrays
 
 
 
@@ -15,6 +47,8 @@ Random Forest Regressor
 MLP Regressor
 
 Each model: train → predict → evaluate
+
+
 
 Notebook 4 — Evaluation & Comparison
 

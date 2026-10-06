@@ -1,3 +1,0 @@
-dc_current
-module8_temp_Bot
-poa_irradiance_2
