@@ -34,12 +34,33 @@ Resampled system_1283 from sub-minute → 1-minute
 
 --------------------------------------------------------------------------
 
-Filter daytime rows (dc_power > 0)  
+6b. Preprocessing (notebooks/1_Data_preproccesing.ipynb, system 4)
+Loaded data/merged/system_4_merged.csv: 4,206,520 rows x 12 columns (no duplicates, no invalid timestamps)
+Sentinel codes (-99999, -7999) -> NaN; no unit conversions needed for system 4
+Removed rows below the 20 W DC-power floor (night / no output): 2,606,809 rows
+Removed high outliers above 5 x median (median 390.49 W, cutoff 1,952.45 W): 82 rows
+Kept dc_power__314, poa_irradiance__313, module_temp_1__321, ambient_temp__320, das_temp__325
+Dropped rows with any remaining missing value (complete-case, no imputation)
+Saved data/cleaned/system_4_cleaned.csv: 1,463,640 rows, no missing values
 
 ------------------------------------------------------------------------------------------
+7. Feature Selection (notebooks/2_Feature_Selection.ipynb, system 4)
+Target: dc_power__314. Candidates: poa_irradiance__313, module_temp_1__321, ambient_temp__320, das_temp__325
+Basic statistics per column (no near-constant or highly skewed columns) -> artifacts/metrics/system_4_feature_statistics.csv
+Distributions (histogram + box plot per column)
+Pearson / Spearman correlation with dc_power: 313 r=0.97, 321 r=0.66, 325 r=0.27, 320 r=0.13
+Correlation heatmap: ambient_temp__320 and das_temp__325 are collinear (r=0.93) -> artifacts/metrics/system_4_correlation_heatmap.png
+Scatter plots per feature (50k-row sample): 313 is linear with dc_power; there is a small low-power band at high irradiance (possible outages/curtailment)
+Two feature configurations defined (FEATURE_CONFIGS):
+  endogenous = 313 + 321 (drop 320, 325) -> built
+  exogenous = 320 + datetime features -> placeholder, disabled
+Endogenous: chronological 80/20 train/test split (train 2007-08 -> 2016-01, test 2016-01 -> 2023-01),
+MinMaxScaler fitted on train only, saved to data/features/group_4_endogenous/ + artifacts/models/scaler_group_4_endogenous.pkl
+Config summary -> artifacts/metrics/system_4_feature_configs.csv
 
-
-
+8. Code cleanup
+Both notebooks simplified to system 4 only (same outputs, verified byte-for-byte on the cleaned CSV, train/test CSVs, scaler and plots)
+All logic lives in the notebooks; the unused src/ package and tests/ folder were removed
 
 --------------------------------------------------------------------
 What You Have Now

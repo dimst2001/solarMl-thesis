@@ -1,0 +1,2 @@
+config,group_name,features,train_rows,test_rows,train_start,train_end,test_start,test_end,feature_directory,scaler_path
+endogenous,group_4_endogenous,"poa_irradiance__313, module_temp_1__321",1170912,292728,2007-08-26 10:15:00,2016-01-20 10:08:00,2016-01-20 10:09:00,2023-01-31 16:49:00,/home/raul/Desktop/solar-data-all/thesis/data/features/group_4_endogenous,/home/raul/Desktop/solar-data-all/thesis/artifacts/models/scaler_group_4_endogenous.pkl
