@@ -52,8 +52,8 @@ Pearson / Spearman correlation with dc_power: 313 r=0.97, 321 r=0.66, 325 r=0.27
 Correlation heatmap: ambient_temp__320 and das_temp__325 are collinear (r=0.93) -> artifacts/metrics/system_4_correlation_heatmap.png
 Scatter plots per feature (50k-row sample): 313 is linear with dc_power; there is a small low-power band at high irradiance (possible outages/curtailment)
 Two feature configurations defined (FEATURE_CONFIGS):
-  endogenous = 313 + 321 (drop 320, 325) -> built
-  exogenous = 320 + datetime features -> placeholder, disabled
+  endogenous = 313 + 321 (drop 320, 325) -> pipeline 8A (8A.1-8A.7), built
+  exogenous = 320 + datetime features -> pipeline 8B, written but commented out
 Endogenous: chronological 80/20 train/test split (train 2007-08 -> 2016-01, test 2016-01 -> 2023-01),
 MinMaxScaler fitted on train only, saved to data/features/group_4_endogenous/ + artifacts/models/scaler_group_4_endogenous.pkl
 Config summary -> artifacts/metrics/system_4_feature_configs.csv
@@ -61,6 +61,21 @@ Config summary -> artifacts/metrics/system_4_feature_configs.csv
 8. Code cleanup
 Both notebooks simplified to system 4 only (same outputs, verified byte-for-byte on the cleaned CSV, train/test CSVs, scaler and plots)
 All logic lives in the notebooks; the unused src/ package and tests/ folder were removed
+
+9. Training Regressor Models — Endogenous (notebooks/3A_Training_Regressor_Models_Endogenous.ipynb)
+One block per model: 3A.x.1 cross-validation, 3A.x.2 training, 3A.x.3 evaluation, 3A.x.4 metrics; 3A.6 comparison summary
+CV: TimeSeriesSplit (5 expanding folds) x seeds 0, 1, 2 on every 10th training row (~117k rows); final model on the full train set (1.17M rows)
+Fixed hyperparameters (no tuning yet); XGBoost uses configs/train_config.yaml
+Test results (292,728 rows, 2016-01 -> 2023-01):
+  Model              test MAE   test RMSE  test R2   CV RMSE (mean ± std)  fit time   model size
+  MLP                24.1 W     68.5 W     0.953     65.0 ± 12.2 W         15 s       62 KB
+  Random Forest      24.6 W     69.4 W     0.951     68.6 ± 14.5 W         21 s       25 MB
+  Decision Tree      24.9 W     70.0 W     0.951     68.4 ± 13.3 W         2 s        277 KB
+  XGBoost            27.9 W     72.0 W     0.948     71.6 ± 14.7 W         9 s        2.3 MB
+  Linear Regression  29.3 W     73.6 W     0.945     74.4 ± 17.0 W         0.04 s     1 KB
+Outputs: artifacts/metrics/system_4_endogenous_model_metrics.csv + _model_rmse.png,
+artifacts/experiments/system_4_endogenous_cv_folds.csv + _test_predictions.csv, artifacts/models/system_4_endogenous_<model>.pkl
+Notebook 3B (exogenous) is built with the same structure and waits for pipeline 8B
 
 --------------------------------------------------------------------
 What You Have Now

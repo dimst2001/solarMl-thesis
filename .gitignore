@@ -21,7 +21,9 @@ data/pvdata_processed/
 
 # Heavy ML Artifacts
 artifacts/models/*.json
-#artifacts/models/*.pkl
+# Trained models are rebuilt by notebooks 3A/3B; the small fitted scalers stay tracked.
+artifacts/models/*.pkl
+!artifacts/models/scaler_*.pkl
 artifacts/models/*.bin
 artifacts/models/*.joblib
 
