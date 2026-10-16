@@ -53,9 +53,10 @@ Correlation heatmap: ambient_temp__320 and das_temp__325 are collinear (r=0.93) 
 Scatter plots per feature (50k-row sample): 313 is linear with dc_power; there is a small low-power band at high irradiance (possible outages/curtailment)
 Two feature configurations defined (FEATURE_CONFIGS):
   endogenous = 313 + 321 (drop 320, 325) -> pipeline 8A (8A.1-8A.7), built
-  exogenous = 320 + datetime features -> pipeline 8B, written but commented out
-Endogenous: chronological 80/20 train/test split (train 2007-08 -> 2016-01, test 2016-01 -> 2023-01),
-MinMaxScaler fitted on train only, saved to data/features/group_4_endogenous/ + artifacts/models/scaler_group_4_endogenous.pkl
+  exogenous = 320 + hour_sin, hour_cos, doy_sin, doy_cos (cyclical time of day / day of year) -> pipeline 8B (8B.1-8B.7), built
+Both: chronological 80/20 train/test split with identical rows (train 2007-08 -> 2016-01, test 2016-01 -> 2023-01),
+MinMaxScaler fitted on train only; scaled features written with 5 decimals (X_train 42 MB endogenous, 70 MB exogenous)
+-> data/features/group_4_<config>/ + artifacts/models/scaler_group_4_<config>.pkl
 Config summary -> artifacts/metrics/system_4_feature_configs.csv
 
 8. Code cleanup
@@ -65,17 +66,31 @@ All logic lives in the notebooks; the unused src/ package and tests/ folder were
 9. Training Regressor Models — Endogenous (notebooks/3A_Training_Regressor_Models_Endogenous.ipynb)
 One block per model: 3A.x.1 cross-validation, 3A.x.2 training, 3A.x.3 evaluation, 3A.x.4 metrics; 3A.6 comparison summary
 CV: TimeSeriesSplit (5 expanding folds) x seeds 0, 1, 2 on every 10th training row (~117k rows); final model on the full train set (1.17M rows)
-Fixed hyperparameters (no tuning yet); XGBoost uses configs/train_config.yaml
+Fixed hyperparameters (no tuning yet); XGBoost uses configs/train_config.yaml except colsample_bytree = 1.0
+(with 2 features, 0.8 gave each tree a single feature: test RMSE 72.0 -> 69.6 W)
 Test results (292,728 rows, 2016-01 -> 2023-01):
   Model              test MAE   test RMSE  test R2   CV RMSE (mean ± std)  fit time   model size
-  MLP                24.1 W     68.5 W     0.953     65.0 ± 12.2 W         15 s       62 KB
-  Random Forest      24.6 W     69.4 W     0.951     68.6 ± 14.5 W         21 s       25 MB
-  Decision Tree      24.9 W     70.0 W     0.951     68.4 ± 13.3 W         2 s        277 KB
-  XGBoost            27.9 W     72.0 W     0.948     71.6 ± 14.7 W         9 s        2.3 MB
+  MLP                24.7 W     69.1 W     0.952     65.1 ± 12.2 W         18 s       62 KB
+  Random Forest      24.6 W     69.4 W     0.951     68.6 ± 14.5 W         17 s       25 MB
+  XGBoost            24.6 W     69.6 W     0.951     67.6 ± 10.5 W         5 s        2.2 MB
+  Decision Tree      24.9 W     70.0 W     0.951     68.5 ± 13.3 W         2 s        276 KB
   Linear Regression  29.3 W     73.6 W     0.945     74.4 ± 17.0 W         0.04 s     1 KB
 Outputs: artifacts/metrics/system_4_endogenous_model_metrics.csv + _model_rmse.png,
 artifacts/experiments/system_4_endogenous_cv_folds.csv + _test_predictions.csv, artifacts/models/system_4_endogenous_<model>.pkl
-Notebook 3B (exogenous) is built with the same structure and waits for pipeline 8B
+
+10. Training Regressor Models — Exogenous (notebooks/3B_Training_Regressor_Models_Exogenous.ipynb)
+Same structure, CV and hyperparameters as 3A, on ambient_temp__320 + 4 cyclical calendar features
+Test results (same 292,728 test rows):
+  Model              test MAE   test RMSE  test R2   CV RMSE (mean ± std)  fit time   model size
+  MLP                158.3 W    210.7 W    0.553     215.1 ± 7.8 W         135 s      69 KB
+  XGBoost            161.0 W    217.1 W    0.525     228.3 ± 7.3 W         5 s        2.4 MB
+  Random Forest      160.5 W    217.6 W    0.523     219.9 ± 7.7 W         27 s       31 MB
+  Linear Regression  182.8 W    224.1 W    0.494     227.6 ± 7.3 W         0.09 s     1 KB
+  Decision Tree      163.0 W    225.7 W    0.487     231.6 ± 6.9 W         3 s        360 KB
+Finding: without on-site irradiance, test RMSE is about 3x higher (R2 ~0.5 vs ~0.95). Time of day and season
+explain only about half of the variance; the rest is clouds, which only the irradiance sensor sees.
+MLP is the best model in both configurations.
+Outputs: same files as 3A with _exogenous_ in the name
 
 --------------------------------------------------------------------
 What You Have Now
