@@ -34,28 +34,40 @@ Resampled system_1283 from sub-minute → 1-minute
 
 --------------------------------------------------------------------------
 
-6b. Preprocessing (notebooks/1_Data_preproccesing.ipynb, system 4)
+6b. Preprocessing (notebooks/1_Data_preproccesing.ipynb, system 4) — revised after the review (step 11)
 Loaded data/merged/system_4_merged.csv: 4,206,520 rows x 12 columns (no duplicates, no invalid timestamps)
+Sampling: Aug 2007 - Jun 2009 every 15 min (59,713 rows), no data Jul - Dec 2009, from Jan 2010 every 1 min
 Sentinel codes (-99999, -7999) -> NaN; no unit conversions needed for system 4
-Removed rows below the 20 W DC-power floor (night / no output): 2,606,809 rows
-Removed high outliers above 5 x median (median 390.49 W, cutoff 1,952.45 W): 82 rows
+Daylight filter on irradiance (not on the target): keep poa_irradiance__313 > 50 W/m² -> 1,632,969 rows
+  (removes nights, the inverter start-up zone and ~7,000 night-time irradiance sensor offsets of ~25 W/m²;
+  the old dc_power ≥ 20 W floor had silently removed most daylight outages)
+Removed high outliers above 5 x median daylight power (median 319.80 W, cutoff 1,598.98 W): 1 row
 Kept dc_power__314, poa_irradiance__313, module_temp_1__321, ambient_temp__320, das_temp__325
-Dropped rows with any remaining missing value (complete-case, no imputation)
-Saved data/cleaned/system_4_cleaned.csv: 1,463,640 rows, no missing values
+Dropped rows with any remaining missing value (complete-case, no imputation): 216,338 rows
+Fault band inspected: power / irradiance ratio is bimodal (outage spike near 0, normal peak at 1);
+  k = 0.8771 W per W/m² (median ratio above 200 W/m²) -> artifacts/metrics/system_4_fault_band.png
+Faults FLAGGED, not deleted: is_fault = irradiance > 50 W/m² and dc_power < 0.5 × k × irradiance
+  92,307 rows (6.52%), 2,643 events (median 7 min, 90th percentile 120 min, longest 735 min)
+Saved data/cleaned/system_4_cleaned.csv: 1,416,630 daylight rows (1,324,323 normal + 92,307 faults), no missing values
+Saved data/cleaned/system_4_cleaned_15min.csv: regular 15-minute grid 2007-08-26 -> 2023-01-31, nights included,
+  541,248 slots, 336,967 valid (≥ 50% of the expected readings), 25,428 slots with a fault (for forecasting)
 
 ------------------------------------------------------------------------------------------
 7. Feature Selection (notebooks/2_Feature_Selection.ipynb, system 4)
+Uses the normal rows only (is_fault == False): 1,324,323 rows
 Target: dc_power__314. Candidates: poa_irradiance__313, module_temp_1__321, ambient_temp__320, das_temp__325
 Basic statistics per column (no near-constant or highly skewed columns) -> artifacts/metrics/system_4_feature_statistics.csv
 Distributions (histogram + box plot per column)
-Pearson / Spearman correlation with dc_power: 313 r=0.97, 321 r=0.66, 325 r=0.27, 320 r=0.13
+Pearson correlation with dc_power (normal rows): 313 r=0.995, 321 r=0.64, 325 r=0.24, 320 r=0.09
 Correlation heatmap: ambient_temp__320 and das_temp__325 are collinear (r=0.93) -> artifacts/metrics/system_4_correlation_heatmap.png
-Scatter plots per feature (50k-row sample): 313 is linear with dc_power; there is a small low-power band at high irradiance (possible outages/curtailment)
+Scatter plots per feature (50k-row sample) -> artifacts/metrics/system_4_scatter_dc_power__314.png
+Voltage / current not used as features: P = V × I defines the power (data leakage)
 Two feature configurations defined (FEATURE_CONFIGS):
-  endogenous = 313 + 321 (drop 320, 325) -> pipeline 8A (8A.1-8A.7), built
-  exogenous = 320 + hour_sin, hour_cos, doy_sin, doy_cos (cyclical time of day / day of year) -> pipeline 8B (8B.1-8B.7), built
-Both: chronological 80/20 train/test split with identical rows (train 2007-08 -> 2016-01, test 2016-01 -> 2023-01),
-MinMaxScaler fitted on train only; scaled features written with 5 decimals (X_train 42 MB endogenous, 70 MB exogenous)
+  endogenous = 313 + 321 (drop 320, 325) -> pipeline 8A (8A.1-8A.7)
+  exogenous = 320 + hour_sin, hour_cos, doy_sin, doy_cos (cyclical time of day / day of year) -> pipeline 8B (8B.1-8B.7)
+Both: chronological 80/20 split with identical rows: train 1,059,458 rows (2007-08 -> 2016-01-21),
+test 264,865 rows (2016-01-21 -> 2023-01; mostly 2016 and 2018, 2019-2022 missing)
+MinMaxScaler fitted on train only; scaled features written with 5 decimals
 -> data/features/group_4_<config>/ + artifacts/models/scaler_group_4_<config>.pkl
 Config summary -> artifacts/metrics/system_4_feature_configs.csv
 
@@ -65,32 +77,41 @@ All logic lives in the notebooks; the unused src/ package and tests/ folder were
 
 9. Training Regressor Models — Endogenous (notebooks/3A_Training_Regressor_Models_Endogenous.ipynb)
 One block per model: 3A.x.1 cross-validation, 3A.x.2 training, 3A.x.3 evaluation, 3A.x.4 metrics; 3A.6 comparison summary
-CV: TimeSeriesSplit (5 expanding folds) x seeds 0, 1, 2 on every 10th training row (~117k rows); final model on the full train set (1.17M rows)
+CV: TimeSeriesSplit (5 expanding folds) x seeds 0, 1, 2 on every 10th training row; final model on the full train set
 Fixed hyperparameters (no tuning yet); XGBoost uses configs/train_config.yaml except colsample_bytree = 1.0
-(with 2 features, 0.8 gave each tree a single feature: test RMSE 72.0 -> 69.6 W)
-Test results (292,728 rows, 2016-01 -> 2023-01):
+(with 2 features, 0.8 gave each tree a single feature)
+Test results on normal rows (264,865 rows), after the cleaning revision:
   Model              test MAE   test RMSE  test R2   CV RMSE (mean ± std)  fit time   model size
-  MLP                24.7 W     69.1 W     0.952     65.1 ± 12.2 W         18 s       62 KB
-  Random Forest      24.6 W     69.4 W     0.951     68.6 ± 14.5 W         17 s       25 MB
-  XGBoost            24.6 W     69.6 W     0.951     67.6 ± 10.5 W         5 s        2.2 MB
-  Decision Tree      24.9 W     70.0 W     0.951     68.5 ± 13.3 W         2 s        276 KB
-  Linear Regression  29.3 W     73.6 W     0.945     74.4 ± 17.0 W         0.04 s     1 KB
+  MLP                18.9 W     28.3 W     0.991     24.4 ± 1.5 W          9 s        62 KB
+  XGBoost            19.1 W     28.9 W     0.991     25.0 ± 1.1 W          4 s        2.2 MB
+  Random Forest      19.0 W     28.9 W     0.991     24.5 ± 1.4 W          15 s       39.4 MB
+  Decision Tree      19.2 W     29.1 W     0.991     24.9 ± 1.3 W          2 s        434 KB
+  Linear Regression  22.0 W     32.0 W     0.989     28.1 ± 1.3 W          0.03 s     1 KB
+  (before the revision: RMSE 69-74 W, R2 0.95, CV std 10-17 W — the error was dominated by unflagged faults)
 Outputs: artifacts/metrics/system_4_endogenous_model_metrics.csv + _model_rmse.png,
 artifacts/experiments/system_4_endogenous_cv_folds.csv + _test_predictions.csv, artifacts/models/system_4_endogenous_<model>.pkl
 
 10. Training Regressor Models — Exogenous (notebooks/3B_Training_Regressor_Models_Exogenous.ipynb)
 Same structure, CV and hyperparameters as 3A, on ambient_temp__320 + 4 cyclical calendar features
-Test results (same 292,728 test rows):
+Test results (same 264,865 normal test rows), after the cleaning revision:
   Model              test MAE   test RMSE  test R2   CV RMSE (mean ± std)  fit time   model size
-  MLP                158.3 W    210.7 W    0.553     215.1 ± 7.8 W         135 s      69 KB
-  XGBoost            161.0 W    217.1 W    0.525     228.3 ± 7.3 W         5 s        2.4 MB
-  Random Forest      160.5 W    217.6 W    0.523     219.9 ± 7.7 W         27 s       31 MB
-  Linear Regression  182.8 W    224.1 W    0.494     227.6 ± 7.3 W         0.09 s     1 KB
-  Decision Tree      163.0 W    225.7 W    0.487     231.6 ± 6.9 W         3 s        360 KB
-Finding: without on-site irradiance, test RMSE is about 3x higher (R2 ~0.5 vs ~0.95). Time of day and season
-explain only about half of the variance; the rest is clouds, which only the irradiance sensor sees.
-MLP is the best model in both configurations.
+  MLP                166.5 W    217.2 W    0.478     218.0 ± 8.7 W         84 s       69 KB
+  XGBoost            167.0 W    222.2 W    0.454     231.2 ± 6.8 W         4 s        2.4 MB
+  Random Forest      167.5 W    222.8 W    0.451     222.0 ± 7.3 W         24 s       29.3 MB
+  Linear Regression  181.0 W    223.1 W    0.450     225.7 ± 6.5 W         0.1 s      1 KB
+  Decision Tree      171.6 W    232.0 W    0.405     232.7 ± 6.5 W         3 s        353 KB
+  (before the revision: RMSE 211-226 W, R2 0.49-0.55)
+Finding: without on-site irradiance the error is ~7-8x higher (R2 ~0.45 vs 0.99): time of day and season explain
+less than half of the variance; the rest is clouds, which only the irradiance sensor sees.
 Outputs: same files as 3A with _exogenous_ in the name
+
+11. Review of the results (findings that led to the cleaning revision in 6b)
+Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
+The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages
+Before the revision the top four endogenous models were within 1 W while the CV std was 10-15 W (tied);
+after it the CV std is 1.1-1.5 W and Linear Regression is clearly behind the other four (32.0 vs 28.3-29.1 W)
+Framing decided: the title's "Πρόβλεψη" = estimation of the power from same-time inputs (+ forecasting 1 h / 3 h, planned);
+the power models are the normal-behaviour baseline for the anomaly detection (residual = actual − expected)
 
 --------------------------------------------------------------------
 What You Have Now
