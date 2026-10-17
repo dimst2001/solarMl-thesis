@@ -19,12 +19,14 @@ thesis/
 │   ├── merged/                       # Per-system merged CSV inputs
 │   ├── cleaned/                      # Notebook 1: system_4_cleaned.csv (daylight, is_fault) + system_4_cleaned_15min.csv (grid)
 │   ├── metrics/                      # Local sensor metadata
-│   └── features/                     # group_4_endogenous/, group_4_exogenous/: scaled train/test CSVs (5 decimals, notebook 2)
+│   └── features/                     # group_4_<endogenous|exogenous|forecast_1h|forecast_3h>/: scaled train/test CSVs (notebook 2)
 ├── notebooks/
 │   ├── 1_Data_preproccesing.ipynb    # Load, audit, clean, flag faults, 15-min grid (system 4)
-│   ├── 2_Feature_Selection.ipynb     # Feature analysis, configs, train/test split, scaling, export
+│   ├── 2_Feature_Selection.ipynb     # Feature analysis, configs, split, scaling, export (8A, 8B, 8C forecasting)
 │   ├── 3A_Training_Regressor_Models_Endogenous.ipynb  # LR, DT, RF, MLP, XGBoost on the endogenous data
-│   └── 3B_Training_Regressor_Models_Exogenous.ipynb   # Same models on the exogenous data (ambient temp + calendar)
+│   ├── 3B_Training_Regressor_Models_Exogenous.ipynb   # Same models on the exogenous data (ambient temp + calendar)
+│   ├── 3C_Forecasting_Regressor_Models_1h.ipynb       # Forecasting 1 h ahead + persistence baselines
+│   └── 3D_Forecasting_Regressor_Models_3h.ipynb       # Forecasting 3 h ahead + persistence baselines
 └── artifacts/                        # Generated outputs
     ├── metrics/                      # Statistics, correlation tables, fault band plot, model metrics per config
     ├── experiments/                  # CV fold results and test predictions per config (notebook 3)

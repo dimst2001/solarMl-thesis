@@ -18,16 +18,7 @@ B. Notebook 2 — Rebuild features (system 4)
 
 B1. ✅ DONE: sections 1-8B re-run on the normal rows (is_fault == False)
 
-B2. New pipeline 8C — Forecasting dataset (from the 15-minute grid):
-    target: dc_power at t + 1 h and t + 3 h (time-based shift: 4 and 12 slots on the regular grid)
-    features known at time t:
-      - power lags: t, t − 15 min, t − 1 h, t − 24 h
-      - irradiance lags: t, t − 1 h, t − 24 h
-      - ambient temperature at t
-      - calendar of the TARGET time (hour / day-of-year sin/cos, known in advance)
-    keep only rows whose target time is daylight and not a fault; drop rows with missing lags
-    same chronological 80/20 split boundary as 8A/8B, MinMax fitted on train only, 5-decimal CSVs
-    -> data/features/group_4_forecast_1h/, group_4_forecast_3h/
+B2. ✅ DONE: pipeline 8C — forecasting datasets 1 h / 3 h ahead from the 15-minute grid (alreadydone.MD 12)
 
 
 
@@ -35,16 +26,14 @@ C. Notebook 3 — Training (system 4)
 
 C1. ✅ DONE: 3A and 3B re-run; endogenous RMSE 69 -> 28 W (R2 0.99), exogenous R2 ~0.45 (alreadydone.MD 9-10)
 
-C2. New notebook 3C — Forecasting 1 h / 3 h ahead:
-    baselines first: persistence (power at t) and same-time-yesterday (power at t + h − 24 h)
-    same five models, time-series CV × seeds, same metrics + forecast skill vs persistence (1 − RMSE / RMSE_persistence)
-    one block per model per horizon (3C.1 ... ), like 3A/3B
+C2. ✅ DONE: notebooks 3C (1 h) and 3D (3 h) with persistence / same-time-yesterday baselines (alreadydone.MD 13)
 
 
 
 D. Notebook 4 — Evaluation & Comparison (system 4, reads saved files only)
 
-D1. Metrics table: MAE, RMSE, R², CV mean ± std — estimation (endogenous / exogenous) and forecasting (1 h / 3 h)
+D1. Metrics table: MAE, RMSE, R², CV mean ± std — estimation (endogenous / exogenous) and forecasting (1 h / 3 h);
+    add a diurnally adjusted (clear-sky index) persistence as a stricter forecasting reference than plain persistence
 
 D2. Ties: CV spread + paired test / bootstrap of RMSE differences; call ties ties
 

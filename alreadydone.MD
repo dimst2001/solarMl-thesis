@@ -105,6 +105,44 @@ Finding: without on-site irradiance the error is ~7-8x higher (R2 ~0.45 vs 0.99)
 less than half of the variance; the rest is clouds, which only the irradiance sensor sees.
 Outputs: same files as 3A with _exogenous_ in the name
 
+12. Forecasting datasets (notebook 2, pipeline 8C)
+Source: the regular 15-minute grid from notebook 1 (nights included, empty slots for gaps)
+Target: DC power of a 15-minute slot 1 h (4 slots) or 3 h (12 slots) after the latest observed slot (the origin)
+13 features known at forecast time: power at the origin and 15 min / 1 h / 24 h before, irradiance at the origin
+and 1 h / 24 h before, ambient temperature at the origin, power of the target slot 24 h earlier,
+calendar of the target time (hour / day of year sin/cos)
+Daylight target slots from a calendar profile built on the training period only (95th percentile irradiance per
+week of year and slot > 50 W/m²: 9.0 h/day in winter to 13.8 h/day in summer); fault slots excluded
+Same split time as 8A/8B (2016-01-21): forecast_1h 93,909 train / 21,011 test rows, forecast_3h 93,812 / 20,884
+-> data/features/group_4_forecast_1h/, group_4_forecast_3h/ (+ baselines_test CSV with persistence and same time yesterday)
+
+13. Forecasting Regressor Models (notebooks/3C_Forecasting_Regressor_Models_1h.ipynb, 3D_..._3h.ipynb)
+Same block structure as 3A/3B plus section .0 Baselines; CV on every training row (5 folds x 3 seeds)
+Skill = 1 − RMSE / RMSE_persistence
+1 h ahead (21,011 test slots):
+  Model                 test RMSE  test R2  skill vs persistence  CV RMSE (mean ± std)
+  Random Forest         140.0 W    0.810    0.34                  149.2 ± 5.6 W
+  XGBoost               140.9 W    0.808    0.34                  151.6 ± 5.9 W
+  MLP                   141.6 W    0.806    0.33                  150.2 ± 6.1 W
+  Decision Tree         146.0 W    0.793    0.31                  156.3 ± 5.7 W
+  Linear Regression     159.8 W    0.752    0.25                  164.8 ± 6.1 W
+  Persistence           211.8 W    0.565    0                     —
+  Same time yesterday   279.2 W    0.244   -0.32                  —
+3 h ahead (20,884 test slots):
+  MLP                   179.9 W    0.686    0.55                  189.5 ± 7.9 W
+  Random Forest         180.4 W    0.684    0.55                  190.2 ± 7.5 W
+  XGBoost               182.0 W    0.678    0.54                  195.5 ± 8.7 W
+  Decision Tree         187.5 W    0.659    0.53                  201.3 ± 8.8 W
+  Linear Regression     204.5 W    0.594    0.49                  210.0 ± 7.1 W
+  Same time yesterday   278.9 W    0.245    0.30                  —
+  Persistence           397.5 W   -0.533    0                     —
+Findings: every model beats both baselines; error grows with the horizon (R2 0.99 estimation -> 0.81 at 1 h -> 0.69 at 3 h);
+RF / XGBoost / MLP are close (within ~2 W at 1 h), Linear Regression clearly behind.
+Note: plain persistence ignores the daily sun cycle, so at 3 h it is weaker than same time yesterday and the 3 h skill
+looks large; a diurnally adjusted (clear-sky) persistence is a stricter reference for notebook 4.
+Outputs: artifacts/metrics/system_4_forecast_<h>_model_metrics.csv + _model_rmse.png,
+artifacts/experiments/system_4_forecast_<h>_cv_folds.csv + _test_predictions.csv
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages
