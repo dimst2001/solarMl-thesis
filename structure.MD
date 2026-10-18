@@ -26,9 +26,10 @@ thesis/
 │   ├── 3A_Training_Regressor_Models_Endogenous.ipynb  # LR, DT, RF, MLP, XGBoost on the endogenous data
 │   ├── 3B_Training_Regressor_Models_Exogenous.ipynb   # Same models on the exogenous data (ambient temp + calendar)
 │   ├── 3C_Forecasting_Regressor_Models_1h.ipynb       # Forecasting 1 h ahead + persistence baselines
-│   └── 3D_Forecasting_Regressor_Models_3h.ipynb       # Forecasting 3 h ahead + persistence baselines
+│   ├── 3D_Forecasting_Regressor_Models_3h.ipynb       # Forecasting 3 h ahead + persistence baselines
+│   └── 4_Evaluation_Comparison.ipynb                  # All tasks: metrics, ties, random vs chronological, efficiency, residuals, importance, best models
 └── artifacts/                        # Generated outputs
-    ├── metrics/                      # Statistics, correlation tables, fault band plot, model metrics per config
+    ├── metrics/                      # Statistics, correlations, fault band, model metrics per config, system_4_eval_* (notebook 4)
     ├── experiments/                  # CV fold results and test predictions per config (notebook 3)
     ├── models/                       # Fitted scalers and trained models (system_4_<config>_<model>.pkl)
     └── original_features_scatterplots-heatmaps/

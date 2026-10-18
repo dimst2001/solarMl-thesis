@@ -143,6 +143,35 @@ looks large; a diurnally adjusted (clear-sky) persistence is a stricter referenc
 Outputs: artifacts/metrics/system_4_forecast_<h>_model_metrics.csv + _model_rmse.png,
 artifacts/experiments/system_4_forecast_<h>_cv_folds.csv + _test_predictions.csv
 
+14. Evaluation & Comparison (notebooks/4_Evaluation_Comparison.ipynb)
+Reads the saved metrics, predictions and models of 3A-3D (only 4.3 re-trains two quick models on purpose)
+4.1 Metrics for all four tasks -> artifacts/metrics/system_4_eval_metrics_all_tasks.csv
+  Clear-sky persistence added as a stricter forecasting reference (clear-sky index kept constant; P_cs = 95th
+  percentile power per week of year and 15-min slot, training period only):
+  RMSE 1 h: persistence 211.8, clear-sky persistence 165.2, best model 140.0 W -> skill vs clear-sky 0.15
+  RMSE 3 h: persistence 397.5, clear-sky persistence 237.0, best model 179.9 W -> skill vs clear-sky 0.24
+  nRMSE (% of mean power): endogenous 5.8%, exogenous 44.4%, forecast 1 h 34.5%, forecast 3 h 44.4%
+4.2 Ties: paired block bootstrap over test days (1,000 resamples). With 477-833 test days even 0.6 W differences
+  are statistically significant: endogenous MLP best (28.3 W; XGB / RF / DT +0.6-0.8 W), exogenous MLP best,
+  forecast 1 h RF best (XGB +0.8 W), forecast 3 h MLP and RF tied
+4.3 Random vs chronological split (LR and DT re-trained with a random 80/20 split):
+  a random split looks 9-13% better for the endogenous task and 13% better for the exogenous Decision Tree
+  (neighbouring minutes leak into the test set); no gain for Linear Regression on exogenous data or for the
+  15-minute forecasting data -> the optimism comes from minute-level neighbours and flexible models
+4.4 Efficiency plot (training time vs RMSE) + table of fit / predict time and model size
+4.5 Predicted vs actual (density per task) and three sample test days: clear 2016-10-04, cloudy 2016-04-27,
+  winter 2018-01-23. Endogenous follows the 1-minute cloud swings; exogenous underestimates clear days
+  (it predicts an average day); 1 h forecasts follow the trend, 3 h forecasts lag
+4.6 Residuals: exogenous error is largest at low irradiance; endogenous nRMSE ~4-7% every month except
+  December (13%, likely snow / partial shading below the fault threshold — candidate for the anomaly part);
+  2017 (4k rows) has very high forecast errors (sparse data)
+4.7 Feature importance: endogenous = irradiance (0.998); exogenous = ambient temperature + calendar;
+  forecast 1 h = irradiance at the origin, then time of day; forecast 3 h = time of day, then irradiance
+4.8 Best model per task (among models tied with the most accurate, the fastest to train):
+  endogenous MLP 28.3 W, exogenous MLP 217.2 W, forecast 1 h Random Forest 140.0 W,
+  forecast 3 h Random Forest 180.4 W (tied with MLP, faster) -> artifacts/metrics/system_4_eval_best_models.csv
+  The endogenous MLP is the normal-behaviour reference for the anomaly detection
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages

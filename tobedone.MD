@@ -30,27 +30,10 @@ C2. ✅ DONE: notebooks 3C (1 h) and 3D (3 h) with persistence / same-time-yeste
 
 
 
-D. Notebook 4 — Evaluation & Comparison (system 4, reads saved files only)
-
-D1. Metrics table: MAE, RMSE, R², CV mean ± std — estimation (endogenous / exogenous) and forecasting (1 h / 3 h);
-    add a diurnally adjusted (clear-sky index) persistence as a stricter forecasting reference than plain persistence
-
-D2. Ties: CV spread + paired test / bootstrap of RMSE differences; call ties ties
-
-D3. Random vs chronological split: train one model with a random 80/20 split as in the indicative methodology
-    and show how much it overestimates performance (adjacent minutes leak) — justifies the chronological split with numbers
-
-D4. Efficiency: fit time, predict time, model size against accuracy
-
-D5. Predicted vs actual: scatter per model + time-series overlay for sample days (clear, cloudy, winter);
-    forecasts vs actual for the same days
-
-D6. Residuals by irradiance level, month / season and test year
-    (test period is mostly 2016 + 2018 + early 2023; 2019-2022 missing — describe it accurately)
-
-D7. Feature importance: Random Forest + XGBoost built-in, permutation importance on a test sample
-
-D8. Best model per task (accuracy + efficiency); the best estimation model is the anomaly-detection baseline
+D. Notebook 4 — Evaluation & Comparison  ✅ DONE (alreadydone.MD 14)
+   open points from it: statistical ties are very strict with ~500-800 test days (differences of 0.6 W count);
+   consider also a practical-equivalence margin (e.g. within 2% RMSE) when choosing models in the thesis text;
+   December endogenous error (snow?) and 2017 forecast errors to look at in the anomaly notebook
 
 
 
