@@ -290,6 +290,22 @@ Smoke-tested with streamlit AppTest; streamlit added to myenv; configs/requirmen
   Earlier: README.md rewritten: environment, data download (functions/ scripts), notebook order (incl. 1283 and notebook 6),
   the app (local, portable copy, local-network access)
 
+20. Notebook and artifact review (2026-10-20): mapped which notebook writes and reads every file in artifacts/
+  (table in structure.MD); 3A/3B and 3C/3D differ only in CONFIG and headings; the 1283 copies differ from the
+  system-4 notebooks by 16-136 lines; metrics_summary.csv and sensors.txt come from functions/, and
+  original_features_scatterplots-heatmaps/ from the early exploration (no notebook uses them). Simplification options
+  listed in tobedone.MD; no code changed
+
+
+22. Simple training example (2026-10-20): notebooks/example_simple_training.ipynb, untracked
+  (listed in .git/info/exclude, not in .gitignore); reads data/cleaned/system_4_cleaned.csv, saves nothing.
+  Layout: load, count / drop missing values, chronological train_test_split(shuffle=False), MinMaxScaler,
+  one block per model (create, timed fit, predict, metrics, results list), results table, predicted-vs-actual plot.
+  Every 10th normal row (132,433 rows, 80/20): RF 29.0 W, MLP 29.3 W, DT 29.5 W, LR 32.2 W (R2 0.989-0.991, close
+  to notebook 3A); exercise: the Decision Tree with a random split looks better (25.4 vs 29.5 W)
+  Differences from 3A: own split / scaling on a 10% subsample (3A reads notebook 2's split of all rows), no CV or
+  ties, 4 models (no XGBoost), saves nothing; ranking differs (RF first here, MLP in 3A) -> why the thesis uses CV + ties
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages
@@ -298,10 +314,7 @@ after it the CV std is 1.1-1.5 W and Linear Regression is clearly behind the oth
 Framing decided: the title's "Πρόβλεψη" = estimation of the power from same-time inputs (+ forecasting 1 h / 3 h, planned);
 the power models are the normal-behaviour baseline for the anomaly detection (residual = actual − expected)
 
---------------------------------------------------------------------
-What You Have Now
-SystemResolutionRowsKey Sensorssystem_41-min4,206,520dc_power, poa_irradiance, ambient_temp, module_temp, dc_voltage, dc_currentsystem_1015-min35,130same + inverter_tempsystem_331-min524,159same + power_factorsystem_3415-min34,773same + wind_speed, humidity, error_codesystem_3515-min34,816same as 34system_361-min508,797dc_power, irradiance×2, module_temp×8, photodiodes×6system_5015-min29,989dc_power, poa_irradiance, ambient_temp, dc_pos/neg voltage & currentsystem_5115-min21,594same as 50system_120015-min37,152dc_power, poa_irradiance, per-inverter data×6, wind_speedsystem_127615-min34,976dc_power, poa_irradiance, ambient_temp, wind_speed, humidity, error_codesystem_127715-min33,645same as 1276system_12831-min817,000dc_power, poa_irradiance, ambient_temp, module_tempsystem_12891-min525,470dc_power, poa_irradiance, ambient_temp, module_temp
-Total: ~6.8 million rows, 638 MB cleaned data
+
 
 
 

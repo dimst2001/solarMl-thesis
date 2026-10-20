@@ -4,9 +4,6 @@ All analysis steps are finished (notebooks 1-6 and the app; details and results 
 Thesis: Μοντέλα Πρόβλεψης Παραγόμενης Ισχύος και Ανίχνευσης Ανωμαλιών σε Φωτοβολταϊκά Συστήματα. The methodology in
 the description is "ενδεικτική", so deviations are allowed when the text justifies them (notes below).
 
-## Next
-
-- Write the thesis text from notebook 6 (thesis_table_1-4, thesis_figure_A-C, conclusions in section 6.6)
 
 ## Points to state in the text
 
@@ -30,6 +27,7 @@ the description is "ενδεικτική", so deviations are allowed when the te
 - Sampling: «Οι μετρήσεις 2007–2009 είναι ανά 15 λεπτά και από το 2010 ανά 1 λεπτό» (the forecasting data use a
   common 15-minute grid)
 - XGBoost and Isolation Forest are additions beyond the indicative list
+
 - Anomaly detection is evaluated on synthetic events (partial losses, sensor faults) because the data have no labels
   for them; the rule labels judge only full outages (otherwise the evaluation would be circular)
 
@@ -37,3 +35,11 @@ the description is "ενδεικτική", so deviations are allowed when the te
 
 - Light hyperparameter tuning (small time-series grid search on the CV subsample)
 - App: CSV upload for batch checks; an hourly temperature profile for the day curve
+- Code simplification without changing results (verify by re-running and comparing the CSVs byte-for-byte, as in
+  step 8): keep one block per model but move the repeated code into a
+  shared helper module (paths, metrics, CV, model factories) for all notebooks; 3A-3D: one loop over a
+  MODELS dict instead of 5 copied blocks; optionally one training notebook with CONFIG as parameter; system 1283 as
+  a SYSTEM_ID switch instead of copied notebooks; move metrics_summary.csv / sensors.txt out of artifacts/metrics
+- Optional: k-Means distance as a fourth unsupervised anomaly detector next to Isolation Forest
+- Optional: the example notebook example_simple_training.ipynb (untracked) could become an appendix or a teaching demo; it is not part
+  of the pipeline

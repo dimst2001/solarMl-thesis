@@ -1,7 +1,7 @@
 # PV Power Prediction and Anomaly Detection
 
 Thesis: *Μοντέλα Πρόβλεψης Παραγόμενης Ισχύος και Ανίχνευσης Ανωμαλιών σε Φωτοβολταϊκά Συστήματα*
-· Author: Raul · Data: [NREL PVDAQ](https://data.openei.org/submissions/4568) (CC-BY)
+· Author: Dimitrios Stampoulidis · Data: [NREL PVDAQ](https://data.openei.org/submissions/4568) (CC-BY)
 
 Predicts the DC power of PV system 4 from its sensors and from the weather, forecasts it 1 h and 3 h ahead, and
 detects faults by comparing the measured power with the expected power. System 1283 is used only as a
