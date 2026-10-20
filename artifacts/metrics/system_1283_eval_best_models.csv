@@ -1,0 +1,5 @@
+task,most_accurate,tied_models,chosen,test_RMSE,test_R2,fit_seconds,predict_seconds,model_size_kb
+"Estimation, endogenous",MLP,"Random Forest, MLP",Random Forest,10615.677670184748,0.9636081544792297,0.5708020290003333,0.0227901650000603,7215.4638671875
+"Estimation, exogenous",MLP,"Linear Regression, Random Forest, MLP, XGBoost",Linear Regression,35017.22421498647,0.604021079304587,0.0051581990001068,0.0006059209999875,0.68359375
+Forecast 1 h,MLP,"Linear Regression, MLP",Linear Regression,21230.799935626947,0.8539486513661407,0.0015152460000535,0.0005526840000129,0.92578125
+Forecast 3 h,MLP,"Linear Regression, MLP, XGBoost",Linear Regression,27295.382293936036,0.758938638758547,0.001670489999924,0.0005228989998613,0.92578125

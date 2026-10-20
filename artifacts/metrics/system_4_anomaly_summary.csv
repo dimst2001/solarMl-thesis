@@ -1,0 +1,4 @@
+detector,system,reference_model,test_flagged_%,real_recall_full_outage_%,real_flags_outside_rule_%,synthetic_full_outage_recall_%,synthetic_partial_loss_recall_%,synthetic_sensor_fault_recall_%,synthetic_false_alarm_%,synthetic_events_per_type,synthetic_injection_days
+rule,4,MLP,6.572862690873689,100.0,0.0,100.0,0.0,0.0,0.0,100,322
+residual,4,MLP,10.970056331768365,99.48960653303638,42.79099678456592,100.0,57.99999999999999,97.0,4.932128882662673,100,322
+iforest,4,MLP,4.513948902817999,78.29435783221975,15.144174415878721,99.0,18.0,19.0,0.8212163663591131,100,322

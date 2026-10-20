@@ -172,6 +172,124 @@ Reads the saved metrics, predictions and models of 3A-3D (only 4.3 re-trains two
   forecast 3 h Random Forest 180.4 W (tied with MLP, faster) -> artifacts/metrics/system_4_eval_best_models.csv
   The endogenous MLP is the normal-behaviour reference for the anomaly detection
 
+15. System 1283 — Generalization (notebooks *_1283.ipynb: 1, 2, 3A-3D, 4; moved on 2026-10-20 to
+    ~/Desktop/solar-data-all/system_1283_notebooks/, only their results stay in artifacts/metrics/system_1283_*)
+Copies of the system-4 notebooks made by a script (column renames + the changes below); same models, hyperparameters
+and rules, so the two systems are comparable. System 1283: one year (2015), 15-second readings, ~250 kW inverter.
+Data findings:
+  dc_power__1136 = inv1 + inv2 DC power, but inverter 1 logged no DC data in 2015 -> the target is inverter 2 only
+  (= V x I; AC meters show both inverters producing); the irradiance sensor is on the same plane, so the rule still holds
+  Extra sentinel codes 63,984,001 = 7999² and 127,968,002 (V x I of two -7999 codes): 470 rows
+  Jun-Nov only short bursts of a few minutes every few hours are logged (dense data: Jan-May and Dec)
+Notebook 1: 15 s -> 1-min means (>= 2 of 4 readings): 204,186 minutes; daylight (> 50 W/m²) 84,346 rows
+  (5 x median rule removed 7 rows at ~250 kW); k = 202.35 W per W/m²
+  Faults: 18,419 rows (21.8%), 107 events (median 28 min, longest 640 min), mostly Nov-Mar (snow);
+  Feb 22-28 is 100% flagged. The low side of the ratio histogram is a long tail (partial snow), not only a spike;
+  FAULT_RATIO 0.5 kept (shallow valley 0.5-0.6) -> artifacts/metrics/system_1283_fault_band.png
+  15-min grid: 35,024 slots, 13,521 valid (38.6%), 1,307 with a fault
+Notebook 2: 65,927 normal rows; Pearson r: irradiance 0.977, module temp 0.841, ambient 0.506, wind -0.169 (weak);
+  no collinear pair. Same configs as system 4 (endogenous = irradiance + module temp; exogenous = ambient + calendar)
+  Split: test = last 7 days of every month (a chronological 80/20 would train on Jan-May only):
+  estimation 54,947 train / 10,980 test (66 test days; Feb has no test rows, all faults);
+  forecasting 3,234 / 403 test slots (1 h) and 3,205 / 403 (3 h), only 17-19 test days
+  Daylight / clear-sky calendar profiles use (month, slot) instead of (week, slot): with the last week of every month
+  held out, test weeks would have no training weeks of their own
+Notebooks 3A-3D: CV on every training row (CV_SUBSAMPLE_STEP = 1); test results (W, nRMSE % of mean power):
+  Task             best          RMSE       nRMSE   R2     others
+  Endogenous       MLP           10,194 W   11.4%   0.966  RF 10,616 (tied), DT 10,918, XGB 11,119, LR 11,265
+  Exogenous        MLP           33,651 W   37.5%   0.634  RF 34,955, LR 35,017, XGB 36,710 (all tied), DT 39,571
+  Forecast 1 h     MLP           20,178 W   24.3%   0.868  LR 21,231 (tied), RF 23,273, XGB 26,474, DT 26,797;
+                                                           persistence 32,672, clear-sky persistence 21,435
+  Forecast 3 h     MLP           26,088 W   31.4%   0.780  LR 27,295, XGB 34,776 (tied), RF 32,014, DT 38,197;
+                                                           persistence 66,108, clear-sky persistence 25,961
+  Exogenous MLP CV is unstable (113k ± 96k W: some folds extrapolate badly); its test score is fine
+Notebook 4 (+ new 4.9 comparison with system 4 -> artifacts/metrics/system_1283_eval_vs_system_4.csv/.png):
+  Best (fastest among tied): endogenous RF, exogenous / 1 h / 3 h Linear Regression
+  Endogenous error highest in winter (Nov 26%, Dec 19%, Jan 18% vs 7-12% Mar-Sep): partial snow below the fault
+  threshold, as in system 4's December -> anomaly notebook
+  13 forecast test slots in February with power 0 but no fault flag: the irradiance sensor was also covered
+  (irradiance < 50 W/m²), so the rule cannot see it -> sensor-fault example for notebook 5
+  Random vs month-block split: random looks better only for the exogenous Decision Tree (+40%); with the small
+  forecasting set the random split is even worse (-35% LR), so the leakage effect is not stable on this system
+E3 answers (system 4 -> system 1283):
+  Ranking: MLP best in 3 of 4 tasks on both systems (and in all 4 on 1283); LR last on system 4 but tied with the best
+  for 1283 forecasting (3,200 training rows favour the simple model); DT worst or near-worst in both
+  Endogenous vs exogenous gap holds: RMSE ratio 7.7 (system 4) vs 3.3 (system 1283); R2 0.99/0.48 vs 0.97/0.63
+  (the clearer sky / stronger seasonal cycle of 1283 helps the calendar model, the snow hurts the endogenous one)
+  Forecast skill vs persistence holds (0.34 / 0.55 vs 0.38 / 0.61 at 1 h / 3 h), but vs clear-sky persistence it
+  shrinks to 0.06 at 1 h and 0.00 at 3 h for 1283 (0.15 / 0.24 for system 4): with ~3k training slots the models
+  learn little beyond the daily clear-sky shape
+
+16. Anomaly Detection (notebooks/5_Anomaly_Detection.ipynb; copy notebooks/1283/5_Anomaly_Detection_1283.ipynb)
+Reference = endogenous model chosen in notebook 4 (system 4 MLP, system 1283 Random Forest) with its scaler; all daylight rows
+Detectors: rule (is_fault, reproduced exactly from k), residual, Isolation Forest
+  Residual: relative residual = (actual - expected) / max(expected, 0.1 x P_REF), trailing 15-min median; thresholds
+  median ± 5 robust σ (1.4826 x MAD) of the training-period normal rows -> system 4: -0.210 / +0.226 (σ 0.044);
+  1283: -0.342 / +0.375 (σ 0.072). First version used the 0.5% / 99.5% quantiles: low threshold -0.43 because the
+  "normal" rows contain unflagged partial losses down to the rule boundary -> 0% partial losses detected; replaced
+  (longer windows 30/60 min did not help: the error is per-day model bias, not minute noise)
+  Isolation Forest: power, irradiance, module temp, point residual; fitted on 200k training-period rows (labels unused),
+  contamination 5%
+Evaluation without circularity:
+  Real test period: rule labels judge only full outages (power < 0.1 x k x irradiance)
+  Synthetic events on clean test days (no rule flag 09:30-14:30), 120 min from 10:00-12:00: full outage (power 0),
+  partial loss (power x 0.6-0.9), sensor fault (irradiance x 0.6-0.8); 25% of clean days reserved for false alarms;
+  event detected if >= 50% of its minutes flagged. System 4: 100 events/type on 322 days; 1283: 33/type on 10 days
+  (10 rounds reuse the days)
+Results (event recall %, false alarms % on reserved clean days):
+                     full outage  partial loss  sensor fault  false alarms  real full-outage recall
+  System 4 rule          100           0             0            0.0            100
+           residual      100          58            97            4.9             99.5
+           iforest        99          18            19            0.8             78.3
+  System 1283 rule       100           0             0            0.0            100
+           residual      100          30            45            2.2            100
+           iforest        67          36            73            3.5             10.2
+  System 4 partial losses by size (residual): 10-20% 0, 20-30% 82, 30-40% 100
+  Trade-off (system 4, residual): 3σ 86% partial losses at 9.7% false alarms; 5σ 59% at 4.9%; 8σ 18% at 1.8%
+Agreement (system 4 test period): all three 3.8% of rows (outages, ratio 0.03); residual only 4.6% (actual/expected 0.72,
+  low light, partial-loss candidates, highest Dec / Apr-Jul); iforest only 0.6% (very high irradiance, normal power)
+Example days (system 4): longest outage 2016-04-17 (all day ~0 W); short events 2016-02-15; 2016-12-08 power capped at
+  ~700 W vs ~1,050 W expected (snow / partial loss: rule flags only the morning, residual the whole day);
+  2016-04-29 power above expected for hours on a dull day (irradiance sensor reading low?)
+Outputs: artifacts/metrics/system_<id>_anomaly_summary.csv, _agreement.csv, _residual_sensitivity.csv/.png,
+  _recall_by_type.png, _examples.png
+
+17. Results Summary (notebooks/6_Results_Summary.ipynb)
+Reads the saved metrics of notebooks 4 and 5 for both systems; nothing is trained
+Tables -> artifacts/metrics/thesis_table_1_estimation.csv, _2_forecasting.csv, _3_best_models.csv, _4_anomaly_detection.csv
+Figures -> thesis_figure_A_nrmse_per_task.png, _B_forecast_skill.png, _C_anomaly_detection.png
+Conclusions (6.6): irradiance is the key input (R2 0.99 / 0.97 vs 0.48 / 0.63 without it); model choice matters less
+  than inputs (MLP most accurate in 7 of 8 task/system cases); forecasts beat persistence but only modestly beat
+  clear-sky persistence (system 4 0.15 / 0.24, 1283 0.06 / 0.00); the rule only sees full outages; the model residual
+  finds partial losses and sensor faults; detection quality follows prediction quality (1283 weaker)
+
+18. Local prediction portal (app/app.py, Streamlit; run from thesis/: streamlit run app/app.py -> http://localhost:8501)
+System 4 only; portable: app/export_bundle.py copies the chosen models + scalers (.pkl), the notebook-5 detector
+  settings and the daylight (month, 15-min slot) list into app/bundle/ (145 KB, bundle.json); the app reads only
+  bundle/, so app/ can be copied to another PC (pip install -r app/requirements.txt; scikit-learn pinned to 1.9.0)
+  and served to the local network with --server.address 0.0.0.0; verified by running a copy of app/ outside the project
+Tab "Predict power": (a) any date (also future) + time + ambient temperature -> exogenous model, plus the whole-day
+  curve and daily energy at that temperature (night slots = 0, daylight from the (month, 15-min slot) irradiance
+  profile of the 15-min grid); (b) irradiance + module temperature (or NOCT estimate from ambient) -> endogenous model
+Tab "Fault check": irradiance, module temperature (or NOCT estimate) and measured DC power -> expected power
+  (endogenous model), deviation in W and %, notebook-1 rule, and a severity colour from the distance to the median in
+  robust σ of the point relative residual (notebook 5, section 5.9, saved in system_<id>_anomaly_detector.json):
+  green < 3σ normal, yellow 3-5σ watch, orange 5-8σ fault (5σ = residual-detector threshold), red > 8σ severe
+  (levels of the sensitivity analysis 5.5.3); σ = 4.7% (system 4) -> ±15% / ±24% / ±38%; σ = 8.1% (1283) ->
+  ±26% / ±42% / ±67%; under-production = partial loss or full outage (< 10% of expected), over-production =
+  irradiance sensor reading low; a table gives the power range of every colour for the entered conditions
+Example: system 4, 12:00 26/10/2026, 20 °C -> 782 W (typical day, ~5.6 kWh for the day); at 800 W/m² and 40 °C module
+  (expected 698 W): 610 W green, 560 W yellow, 480 W orange (partial loss 31%), 300 W / 20 W red
+Smoke-tested with streamlit AppTest; streamlit added to myenv; configs/requirments.txt updated to the installed versions
+  (the old pins, e.g. scikit-learn 1.4, could not load the saved models)
+
+19. Simplification (2026-10-20): README and structure shortened, tobedone trimmed to open points; train_config.yaml
+  removed (only mentioned in comments; the XGBoost values are in the notebooks); data/features/ no longer tracked by
+  Git (recreated by notebook 2); all charts / result tables incl. system 1283 and thesis_* now tracked; folder
+  'functions ' renamed to 'functions'
+  Earlier: README.md rewritten: environment, data download (functions/ scripts), notebook order (incl. 1283 and notebook 6),
+  the app (local, portable copy, local-network access)
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages

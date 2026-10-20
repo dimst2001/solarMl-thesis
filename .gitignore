@@ -17,6 +17,8 @@ data/merged/
 data/metrics/
 data/pvdata/
 data/pvdata_processed/
+# Model inputs, recreated by notebook 2
+data/features/
 
 
 # Heavy ML Artifacts
@@ -26,6 +28,10 @@ artifacts/models/*.pkl
 !artifacts/models/scaler_*.pkl
 artifacts/models/*.bin
 artifacts/models/*.joblib
+
+# System 1283: only its results (artifacts/metrics/system_1283_*) are kept; its notebooks live outside the repo
+artifacts/experiments/system_1283_*
+artifacts/models/scaler_group_1283_*
 
 # IDE & OS specific
 .vscode/

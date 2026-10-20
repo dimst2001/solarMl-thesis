@@ -1,0 +1,6 @@
+# Minimal environment for the local app (app.py). The model files are pickles, so scikit-learn must be the
+# version they were trained with; numpy / pandas as in the training environment.
+streamlit==1.66.0
+scikit-learn==1.9.0
+numpy==2.5.0
+pandas==3.0.3

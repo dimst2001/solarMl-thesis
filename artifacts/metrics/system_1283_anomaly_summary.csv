@@ -1,0 +1,4 @@
+detector,system,reference_model,test_flagged_%,real_recall_full_outage_%,real_flags_outside_rule_%,synthetic_full_outage_recall_%,synthetic_partial_loss_recall_%,synthetic_sensor_fault_recall_%,synthetic_false_alarm_%,synthetic_events_per_type,synthetic_injection_days
+rule,1283,Random Forest,32.90149107797605,100.0,0.0,100.0,0.0,0.0,0.0,33,10
+residual,1283,Random Forest,34.673673918357366,100.0,5.111032781106803,100.0,30.303030303030305,45.45454545454545,2.2336769759450172,33,10
+iforest,1283,Random Forest,6.36763627474945,10.161249040184286,41.55470249520153,66.66666666666666,36.36363636363637,72.72727272727273,3.493699885452463,33,10
