@@ -33,6 +33,9 @@ the description is "ενδεικτική", so deviations are allowed when the te
 
 ## Optional
 
+- Replication: put the download/merge scripts (now in ~/Desktop/solar-data-all/functions/, outside the repo)
+  into the repository with relative paths, so README path B works after a plain clone
+
 - Light hyperparameter tuning (small time-series grid search on the CV subsample)
 - App: CSV upload for batch checks; an hourly temperature profile for the day curve
 - Code simplification without changing results (verify by re-running and comparing the CSVs byte-for-byte, as in

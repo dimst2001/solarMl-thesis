@@ -306,6 +306,19 @@ Smoke-tested with streamlit AppTest; streamlit added to myenv; configs/requirmen
   Differences from 3A: own split / scaling on a 10% subsample (3A reads notebook 2's split of all rows), no CV or
   ties, 4 models (no XGBoost), saves nothing; ranking differs (RF first here, MLP in 3A) -> why the thesis uses CV + ties
 
+23. README rewrite for replication (2026-10-29): two paths, A = run the app right after cloning (app/bundle/ is in
+  Git; only app/requirements.txt needed) and B = full pipeline (configs/requirments.txt, data download, notebooks
+  1-6, export_bundle.py); added Python 3.12 / AWS CLI requirements, app tabs, troubleshooting, the S3 prefix for a
+  manual download, and that functions/ lives outside the repo. Checked: the bundled pickles load and
+  `streamlit run app/app.py` starts (HTTP 200) with myenv
+
+24. Data preview and pipeline explanation (2026-10-29): data/sample/ with system_4_raw_preview.csv (4,320 1-min
+  rows of 2016-10-04 clear, 2016-04-27 cloudy, 2018-01-23 winter, from merged/) and system_4_cleaned_preview.csv
+  (1,881 daylight rows, 51 faults, all at sunrise / sunset) + README with the column meanings;
+  docs/figures/system_4_preview_days.png (power vs irradiance of the 3 days); docs/PIPELINE.md: mermaid flow chart
+  and steps 0-6 in words with the fault band, correlation heatmap, figure A, sample days, figure C and anomaly
+  examples; linked from README.md
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages
