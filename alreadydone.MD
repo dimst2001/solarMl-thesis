@@ -319,6 +319,24 @@ Smoke-tested with streamlit AppTest; streamlit added to myenv; configs/requirmen
   and steps 0-6 in words with the fault band, correlation heatmap, figure A, sample days, figure C and anomaly
   examples; linked from README.md
 
+26. k of the fault rule on the training period only (2026-11-26, fixes the leakage found in 25):
+  notebook 1 now fixes the split and measures k before it, saves both to
+  artifacts/metrics/system_<id>_fault_rule.json; notebook 2 takes SPLIT_TIME from it (80% of the cleaned rows in
+  time order, was 80% of the normal rows), notebook 5 reads k and asserts it equals the training-period median.
+  System 1283: k on the training days (all but the last 7 days of each month)
+  System 4: split 2016-01-21 11:40 (was 08:47), still 80.0% train; k 0.8771 -> 0.8807; faults 92,307 -> 92,652
+  (6.54%, 2,665 events). System 1283: k 202.35 -> 203.90; faults 18,419 -> 18,471
+  Reran notebooks 1-6 + Demo for system 4, 1-5 for system 1283, app/export_bundle.py (backup of the old outputs
+  in the session scratchpad). Results change only slightly:
+  System 4 endogenous MLP 28.29 -> 28.40 W, exogenous MLP 217.16 -> 217.13 W, forecast 1 h RF 140.03 -> 140.12 W,
+  forecast 3 h: RF / MLP / XGBoost now tied, XGBoost chosen (fastest) 181.9 W (was RF 180.4 W, tied with MLP)
+  Anomaly system 4 residual: partial loss 58 -> 59%, sensor fault 97 -> 99%, false alarms 4.9 -> 5.0%;
+  iforest partial 18 -> 22%, sensor 19 -> 28%; 320 injection days (was 322). System 1283: same recalls,
+  residual false alarms 2.2 -> 2.0%; endogenous RF 10,616 -> 10,586 W, exogenous tie no longer includes XGBoost
+  Docs: PIPELINE.md (k, 3 h model, recalls, skill 54%), data/sample preview is_fault refreshed (52 faults);
+  notebook 6 conclusions (MLP most accurate in 5 of 8, partial loss 59% / 87-96% for >= 20%, sensor 99%,
+  3σ 88% at 9%, 8σ 17% at 2%, 1283 clear-sky skill 3 h -0.05)
+
 11. Review of the results (findings that led to the cleaning revision in 6b)
 Fault band: 0.69% of test rows (strong sun, almost no power) caused ~69% of the squared error (RMSE 69 W -> 38 W without them)
 The dc_power ≥ 20 W floor selected rows using the target and hid most daylight outages

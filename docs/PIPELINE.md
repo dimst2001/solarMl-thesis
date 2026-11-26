@@ -34,9 +34,10 @@ minutes. That close match is why the irradiance is the most important input.
   dropped. Nothing is filled in.
 - **Daylight only.** Rows with irradiance > 50 W/m² are kept. The filter uses the irradiance, not the power, so
   real daylight outages (sun but no power) stay in the data.
-- **Fault flag.** On a normal day the power is about *k* × irradiance, with *k* = 0.877 W per W/m². A row is
-  flagged as a fault when the power is less than half of that. Faults are marked, not deleted: 6.5% of daylight
-  rows, in 2,643 events.
+- **Fault flag.** On a normal day the power is about *k* × irradiance, with *k* = 0.881 W per W/m², measured on the
+  training period only (first 80% of the rows in time order, the split of notebook 2), so the labels never see the
+  test period. A row is flagged as a fault when the power is less than half of that. Faults are marked, not deleted:
+  6.5% of daylight rows, in 2,665 events.
 
 ![Fault band](../artifacts/metrics/system_4_fault_band.png)
 
@@ -86,10 +87,10 @@ model:
 | Estimation, sensor | MLP | 28 W (5.8%) | 0.99 |
 | Estimation, weather | MLP | 217 W (44%) | 0.48 |
 | Forecast 1 h | Random Forest | 140 W (35%) | 0.81 |
-| Forecast 3 h | Random Forest | 180 W (45%) | 0.68 |
+| Forecast 3 h | XGBoost (tied with Random Forest and MLP, fastest) | 182 W (45%) | 0.68 |
 
 Without the irradiance sensor the error is about 8 times higher: the calendar knows the sun's position but not
-the clouds. The forecasts beat persistence by 34% (1 h) and 55% (3 h).
+the clouds. The forecasts beat persistence by 34% (1 h) and 54% (3 h).
 
 ## 4. Evaluation (notebook 4)
 
@@ -116,8 +117,8 @@ outage (power = 0), partial loss (power × 0.6–0.9) and sensor fault (irradian
 
 ![Anomaly detection results](../artifacts/metrics/thesis_figure_C_anomaly_detection.png)
 
-All three detectors catch full outages, but only the residual detector also finds partial losses (58%) and sensor
-faults (97%), with 5% false alarms. Losses smaller than about 20% are hidden in the model's normal error.
+All three detectors catch full outages, but only the residual detector also finds partial losses (59%) and sensor
+faults (99%), with 5% false alarms. Losses smaller than about 20% are hidden in the model's normal error.
 
 ![Example days](../artifacts/metrics/system_4_anomaly_examples.png)
 

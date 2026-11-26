@@ -3,35 +3,35 @@
  "models": {
   "endogenous": {
    "name": "MLP",
-   "test_RMSE": 28.290479083294773,
-   "test_R2": 0.9911482462758572
+   "test_RMSE": 28.400925885418854,
+   "test_R2": 0.9910757875056436
   },
   "exogenous": {
    "name": "MLP",
-   "test_RMSE": 217.15859529636265,
-   "test_R2": 0.4784418145235166
+   "test_RMSE": 217.12906183467703,
+   "test_R2": 0.4783961149791452
   }
  },
  "detector": {
   "reference_model": "MLP",
-  "k": 0.8770809545974425,
+  "k": 0.8806914157850015,
   "fault_ratio": 0.5,
   "fault_min_irradiance": 50.0,
-  "p_ref": 1012.1427199999997,
+  "p_ref": 1012.1458999999999,
   "min_expected_share": 0.1,
-  "residual_center": 0.008234357159100224,
-  "residual_sigma": 0.04362298816455248,
+  "residual_center": 0.008732203843577728,
+  "residual_sigma": 0.04398449424277859,
   "residual_mad_factor": 5.0,
-  "low_threshold": -0.20988058366366216,
-  "high_threshold": 0.22634929798186262,
+  "low_threshold": -0.2111902673703152,
+  "high_threshold": 0.22865467505747067,
   "single_reading": {
    "endogenous": {
     "model": "MLP",
     "method": "median \u00b1 5 robust sigma",
-    "low": -0.22698213748521082,
-    "high": 0.24319940067030896,
-    "center": 0.008108631592549076,
-    "sigma": 0.04701815381555198,
+    "low": -0.22828239092294814,
+    "high": 0.2454495471011475,
+    "center": 0.008583578089099687,
+    "sigma": 0.04737319380240956,
     "severity_levels": {
      "green": 3,
      "yellow": 5,
@@ -41,8 +41,8 @@
    "exogenous": {
     "model": "MLP",
     "method": "0.5% / 99.5% quantiles",
-    "low": -0.8845350101552992,
-    "high": 1.2078881741871321
+    "low": -0.8834287849047263,
+    "high": 1.2941638700416436
    }
   }
  },

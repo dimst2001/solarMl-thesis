@@ -34,7 +34,7 @@ The number after `__` is the PVDAQ metric id.
 
 **`system_4_cleaned_preview.csv`**: 1,881 rows, the same days after notebook 1 (as in
 `data/cleaned/system_4_cleaned.csv`): daylight rows only (irradiance > 50 W/m²), the 5 columns that are kept, and
-`is_fault`, which is True when the power is below half of what the irradiance predicts (51 rows here, all at
+`is_fault`, which is True when the power is below half of what the irradiance predicts (52 rows here, all at
 sunrise or sunset when the array is shaded).
 
 ## Quick look

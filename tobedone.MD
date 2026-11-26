@@ -28,8 +28,16 @@ the description is "ενδεικτική", so deviations are allowed when the te
   common 15-minute grid)
 - XGBoost and Isolation Forest are additions beyond the indicative list
 
+- k of the fault rule is measured on the training period only (notebook 1 fixes the split), because the fault
+  labels choose the normal training rows; on all rows it was 0.4% lower and 69 test labels differed
+- The 5 x median outlier cutoff (notebook 1, stage 8) uses all rows; it only removes physically impossible
+  readings (1 row for system 4, 7 for 1283), so it is a sanity bound, not a learned parameter
+- Forecast 3 h of system 4: Random Forest, MLP and XGBoost are tied; the chosen model (fastest) can flip with
+  tiny data changes (it went RF -> XGBoost after the k fix), so present it as a tie
+
 - Anomaly detection is evaluated on synthetic events (partial losses, sensor faults) because the data have no labels
   for them; the rule labels judge only full outages (otherwise the evaluation would be circular)
+
 
 ## Optional
 

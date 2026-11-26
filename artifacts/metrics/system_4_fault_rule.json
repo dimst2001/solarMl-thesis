@@ -1,0 +1,10 @@
+{
+  "k": 0.8806914157850015,
+  "k_min_irradiance_w_m2": 200.0,
+  "fault_min_irradiance_w_m2": 50.0,
+  "fault_ratio": 0.5,
+  "k_rows": 855283,
+  "split": "chronological",
+  "train_fraction": 0.8,
+  "split_time": "2016-01-21 11:40:00"
+}
